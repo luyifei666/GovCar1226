@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.MsgFragment">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/main_color">
+
+
+        <TextView
+            android:id="@+id/titletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@color/gank_text1_color"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/submit"
+            android:textSize="18sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/gank_text1_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="保存"/>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

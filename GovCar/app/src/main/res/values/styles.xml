@@ -1,0 +1,121 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarSize">48dip</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <!--跳转动画-->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="ToolBarPopupThemeDay" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/main_color</item>
+        <item name="android:background">@color/gank_text1_color</item>
+    </style>
+
+    <!-- tab标题-->
+    <style name="tab_head" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!--BaseRecyclerViewAdapterHelper-->
+    <style name="tweetName">
+        <item name="android:textColor">@color/hard_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="android:shadowColor">#44000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    <style name="tweetText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColorLink">#888888</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="tweetDate">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FFCCCCCC</item>
+    </style>
+
+    <!--keepingappalice-->
+    <style name="hwpush_NoActionBar" parent="android:Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!--1像素Activity风格 @android:color/transparent-->
+    <style name="SingleActivityStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoDisplay">false</item>
+    </style>
+
+    <!--白天-->
+    <style name="DayTheme" parent="@style/AppTheme">
+        <item name="android:windowBackground">@color/main_color</item>
+        <item name="app_background">@color/backgroundColor</item>
+        <item name="lineColor">@color/lineColor</item>
+        <item name="app_toolbar_bg">@color/main_color</item>
+        <item name="toolbar_line_color">@color/setting_toobar_line_color</item>
+        <item name="setting_arrow_right">@drawable/gank_icon_arrow_right</item>
+        <item name="navigation_bg">@color/navigation_bg_color</item>
+        <item name="head_lines_bg">@color/head_lines_bg_color</item>
+        <item name="head_lines_text1_color">@color/head_lines_text1_color</item>
+        <item name="head_lines_text2_color">@color/head_lines_text2_color</item>
+        <item name="girl_pic_trans_item">@color/girl_pic_trans_item</item>
+        <item name="girl_pic_trans_item_text_color">@color/girl_pic_trans_item_text_color</item>
+        <item name="icon_like_color">@color/icon_like_color</item>
+        <item name="girl_pic_trans_shade">@color/girl_pic_trans_shade</item>
+        <item name="refresh_bg">@color/refresh_bg_color</item>
+        <item name="refresh_text_color">@color/refresh_text_color</item>
+        <item name="refresh_arrow_icon">@drawable/gank_icon_pull_arrow_white</item>
+        <item name="refresh_success_icon">@drawable/gank_icon_pull_refresh_success_white</item>
+        <item name="tablayout_bg">@color/tablayout_bg_color</item>
+        <item name="tablayout_text_color">@color/tablayout_text_color</item>
+        <item name="tablayout_indicator_color">@color/tablayout_indicator_color</item>
+        <item name="main_text_color">@color/main_text_color</item>
+        <item name="progressbar_color">@color/progressbar_color</item>
+        <item name="toolbar_title_color">@color/toolbar_title_color</item>
+        <item name="black_text1_color">@color/black_text1_color</item>
+        <item name="black_text2_color">@color/black_text2_color</item>
+        <item name="black_text3_color">@color/black_text3_color</item>
+        <item name="webview_progress_bg_color">@color/webview_progress_bg_color</item>
+        <item name="webview_progress_color">@color/webview_progress_color</item>
+        <item name="app_icon_search">@drawable/gank_icon_search_white</item>
+        <item name="arrow_down_white">@drawable/gank_icon_arrow_drop_down</item>
+        <item name="collect_btn_border">@color/btn_collect_border_color</item>
+    </style>
+
+    <!--imageselector-->
+
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>.
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+    </style>
+
+    <!-- toolbar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+</resources>

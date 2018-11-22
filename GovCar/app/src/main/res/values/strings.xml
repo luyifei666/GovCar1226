@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GovCar</string>
+    <string name="ok">确定</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 主页 -->
+    <string name="menu_msg">首页</string>
+    <string name="menu_contact">待办</string>
+    <string name="menu_find">消息</string>
+    <string name="menu_me">我的</string>
+
+    <string name="message_permission_rationale">允许以下权限以便程序继续执行:\n\n%1$s</string>
+    <string name="title_dialog">"提示"</string>
+    <string name="setting">"设置"</string>
+    <string name="no">"取消"</string>
+    <string name="resume">"继续"</string>
+    <string name="cancel">"取消"</string>
+
+    <string name="message_permission_always_failed">我们需要以下权限，请在设置中为我们开启:\n\n%1$s</string>
+    <!-- 消息成功率统计： 通道将消息转发给SDK后，SDK通知通道消息已接收到 -->
+    <string name="hwpush_ability_value" translatable="false">successRateAnalytics</string>
+    <string name="network_err">Simulation network error</string>
+</resources>

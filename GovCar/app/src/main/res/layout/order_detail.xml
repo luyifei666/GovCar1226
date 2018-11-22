@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/order_num"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:paddingLeft="18dp"
+                    android:text="订单号：1234567890987654321"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:id="@+id/order_status"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingLeft="18dp"
+                    android:text="待审批"
+                    android:textColor="@color/webview_progress_color"
+                    android:textSize="15sp"
+                    android:textStyle="italic"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:paddingLeft="18dp"
+                    android:text="单位信息"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/line_color"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_unit0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="用车单位"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_unit0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_unit0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="中共文山市委机构编制办公室"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_unit_level0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="单位级别"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_level0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_unit_level0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_unit_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="科级"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_unit_budget0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="预算余额"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_budget0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_unit_budget0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_unit_budget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="5000"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_unit_usedbudget0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="已用额度"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_usedbudget0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_unit_usedbudget0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_unit_usedbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="1688"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:paddingLeft="18dp"
+                    android:text="人员信息"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv2"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/line_color"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_contacts0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="联系人"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_contacts0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_contacts0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="王知荣"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_contacts_tel0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="联系人电话"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_contacts_tel0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_contacts_tel0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_contacts_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/icon_call"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="13398782089"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_user0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="用车人"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_user0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_user0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="郭宗显"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_user_tel0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="用车人电话"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_user_tel0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_user_tel0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_user_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/icon_call"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="13888888888"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_user_num0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="用车人数"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_user_num0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_user_num0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_user_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="4 人"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_user_together0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="随车人员"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_user_together0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_user_together0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_user_together"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text=" 张三 、李四 、王五"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv3"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:paddingLeft="18dp"
+                    android:text="任务信息"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv3"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/line_color"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_type0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="用车类型"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_type0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_type0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="越野车"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_num0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="车辆数目"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_num0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_num0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="1"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_property0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="用车性质"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_property0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_property0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_property"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="文件传递"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_starttime0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="出车时间"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_starttime0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_starttime0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_starttime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="2018-09-26 09:30"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_backtime0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="归队时间"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_backtime0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_backtime0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_backtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text=" 2018-09-26 17:00"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_time0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="用车时长"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_time0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_time0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:text="1天"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_start0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="出发地"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_start0"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_start0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/icon_start"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="5"
+                        android:scrollbars="horizontal"
+                        android:singleLine="false"
+                        android:text="大姚县国有林场三岔河分场大姚县国有林场三岔河分场大姚县国有林场三岔河分场大姚县国有林场三岔河分场"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_destination0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="目的地"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_destination0"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_destination0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/icon_end"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:scrollbars="horizontal"
+                        android:singleLine="false"
+                        android:maxLines="1"
+                        android:text="三岔河镇背阴地村"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_path0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:gravity="left"
+                    android:text="途径地"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_path0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_path0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_path"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/icon_path"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:scrollbars="horizontal"
+                        android:singleLine="false"
+                        android:maxLines="1"
+                        android:text="三岔河镇、背阴地村"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_reason0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:gravity="left"
+                    android:text="用车事由"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_reason0"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_reason0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:scrollbars="horizontal"
+                        android:singleLine="false"
+                        android:maxLines="1"
+                        android:text="巡护"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv_car_use_remark0"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="left"
+                    android:text="备注"
+                    android:textSize="13sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_car_use_remark0"
+                    android:layout_width="270dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_car_use_remark0"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:id="@+id/tv_car_use_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:imeOptions="actionDone"
+                        android:maxLines="5"
+                        android:scrollbars="horizontal"
+                        android:singleLine="false"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_car_use_enclosure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tv4"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:paddingLeft="18dp"
+                    android:text="附件查看"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv4"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/line_color"/>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarStyle="outsideOverlay"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/list_item_image"/>
+
+            <LinearLayout
+                android:id="@+id/btn_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_reject"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background"
+                    android:padding="8dp"
+                    android:text="驳回申请"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"/>
+
+                <Button
+                    android:id="@+id/btn_pass"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background"
+                    android:padding="8dp"
+                    android:text="审批通过"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

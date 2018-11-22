@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#31343B</color>
+    <color name="colorPrimaryDark">#1296db</color>
+    <color name="colorAccent">#1296db</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="line_gray">#dcdcdc</color>
+    <color name="line_gray_light">#f1f1f1</color>
+    <color name="gray_page_bg">#ecedf1</color>
+    <color name="gray_text">#5b5b5b</color>
+    <color name="gray_text_dark">#292929</color>
+    <color name="gray_text_light">#979797</color>
+    <color name="window_half_transparent">#90000000</color>
+    <color name="blue_white">#0eabe5</color>
+    <color name="blue">#33b5e5</color>
+
+    <!-- 主页 -->
+    <color name="menu_gray">#8a8a8a</color>
+    <color name="menu_green">#1296db</color>
+    <!--<color name="menu_green">#45c01a</color>-->
+
+    <!-- 微信 -->
+    <color name="wx_head_selected">#1296db</color>
+    <color name="wx_head_default">#5b666f</color>
+
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="line_color">#CCCCCC</color>
+    <color name="titlecolor">#1296db</color>
+    <color name="hard_color">#48495f</color>
+    <color name="txt_color">#48495F</color>
+    <color name="color_light_blue">#00DDB6</color>
+
+    <color name="gank_text1_color">#FFFFFF</color><!--一级字体颜色-->
+
+    <color name="backgroundColor">#fafafa</color>
+    <color name="textColor">#3b3b3b</color>
+    <color name="lineColor">#cccccc</color>
+    <color name="item_bg">#ffffff</color>
+    <color name="item_setting_bg">#ffffff</color>
+    <color name="item_selecter_pressed_color">#e6e6e6</color>
+    <color name="main_color">#1296db</color>
+    <color name="setting_toobar_line_color">#54aee6</color>
+    <color name="navigation_bg_color">#f7f7f7</color>
+    <color name="navigation_menu_checked_color">#54aee6</color>
+    <color name="navigation_menu_default_color">#4d4d4d</color>
+    <color name="head_lines_bg_color">#ffffff</color>
+    <color name="head_lines_text1_color">#54aee6</color>
+    <color name="head_lines_text2_color">#3b3b3b</color>
+    <color name="girl_pic_trans_item">#a3181818</color>
+    <color name="girl_pic_trans_item_text_color">#FFFFFF</color>
+    <color name="icon_like_color">#fa4242</color>
+    <color name="girl_pic_trans_shade">#00000000</color>
+    <color name="refresh_bg_color">#404040</color>
+    <color name="refresh_text_color">#FFFFFF</color>
+    <color name="tablayout_bg_color">#54aee6</color>
+    <color name="tablayout_text_color">#FFFFFF</color>
+    <color name="tablayout_indicator_color">#e53580ae</color>
+    <color name="main_text_color">#3c87b7</color>
+    <color name="progressbar_color">#FFFFFF</color>
+    <color name="toolbar_title_color">#FFFFFF</color>
+    <color name="black_text1_color">#000000</color>
+    <color name="black_text2_color">#454545</color>
+    <color name="black_text3_color">#7c7c7c</color>
+    <color name="webview_progress_bg_color">#FFFFFF</color>
+    <color name="webview_progress_color">#FF8080</color>
+    <color name="btn_collect_border_color">#c6c6c6</color>
+    <color name="clickspan_color">#00ddb6</color>
+    <color name="dull_blue">#3B4BBF</color>
+</resources>
