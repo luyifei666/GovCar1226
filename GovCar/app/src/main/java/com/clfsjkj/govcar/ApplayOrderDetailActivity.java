@@ -190,7 +190,6 @@ public class ApplayOrderDetailActivity extends BaseActivity {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 ImageBrowseIntent.showUrlImageBrowse(mContext, list, position);
-                ToastUtils.showShortToast("点击了recycleView position = " + position);
             }
         });
 
