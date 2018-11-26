@@ -10,6 +10,7 @@
         android:id="@+id/iv_img"
         android:layout_width="74dp"
         android:layout_height="74dp"
+        android:background="@mipmap/default_image"
         android:scaleType="centerCrop" />
 
 </LinearLayout>
