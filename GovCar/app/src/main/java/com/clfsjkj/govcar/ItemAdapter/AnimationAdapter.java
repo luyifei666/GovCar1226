@@ -24,23 +24,22 @@ public class AnimationAdapter extends BaseQuickAdapter<Status, BaseViewHolder> {
     protected void convert(BaseViewHolder helper, Status item) {
         helper.addOnClickListener(R.id.img).addOnClickListener(R.id.tweetText).addOnClickListener(R.id.tweetName);
         mContext = MainApplication.getContext();
-        Glide.with(mContext).
-                load("https://ws1.sinaimg.cn/large/0065oQSqly1fw8wzdua6rj30sg0yc7gp.jpg").crossFade()
-                .error(R.mipmap.m_img1)//加载错误的替换图
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)//缓存最终图片
-                .into((ImageView) helper.getView(R.id.img));
+//        Glide.with(mContext).
+//                load("https://ws1.sinaimg.cn/large/0065oQSqly1fw8wzdua6rj30sg0yc7gp.jpg")
+////                .error(R.mipmap.m_img1)//加载错误的替换图
+//                .into((ImageView) helper.getView(R.id.img));
 
-//        switch (helper.getLayoutPosition()% 3){
-//            case 0:
-//                helper.setImageResource(R.id.img,R.mipmap.animation_img1);
-//                break;
-//            case 1:
-//                helper.setImageResource(R.id.img,R.mipmap.animation_img1);
-//                break;
-//            case 2:
-//                helper.setImageResource(R.id.img,R.mipmap.animation_img1);
-//                break;
-//        }
+        switch (helper.getLayoutPosition()% 3){
+            case 0:
+                helper.setImageResource(R.id.img,R.mipmap.animation_img1);
+                break;
+            case 1:
+                helper.setImageResource(R.id.img,R.mipmap.animation_img1);
+                break;
+            case 2:
+                helper.setImageResource(R.id.img,R.mipmap.animation_img1);
+                break;
+        }
 //        helper.setText(R.id.tweetName,"Hoteis in Rio de Janeiro");
         helper.setText(R.id.tweetName,"敬老万寿宴：昆明市新的社会……");
         String msg="\"He was one of Australia's most of distinguished artistes, renowned for his portraits\"";

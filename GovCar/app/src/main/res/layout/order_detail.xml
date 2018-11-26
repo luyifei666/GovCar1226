@@ -1038,39 +1038,75 @@
                 app:spanCount="4"
                 tools:listitem="@layout/list_item_image"/>
 
-            <LinearLayout
-                android:id="@+id/btn_status"
+            <RelativeLayout
+                android:id="@+id/rl_car_use_timeline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:padding="4dp">
 
-                <Button
-                    android:id="@+id/btn_reject"
+                <TextView
+                    android:id="@+id/tv5"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_background"
-                    android:padding="8dp"
-                    android:text="驳回申请"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"/>
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:paddingLeft="18dp"
+                    android:text="订单流程"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
 
-                <Button
-                    android:id="@+id/btn_pass"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_background"
-                    android:padding="8dp"
-                    android:text="审批通过"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"/>
-            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv5"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/line_color"/>
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_time_line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"/>
+
+            <LinearLayout
+            android:id="@+id/btn_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_reject"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background"
+                android:padding="8dp"
+                android:text="驳回申请"
+                android:textColor="@color/white"
+                android:textSize="13sp"/>
+
+            <Button
+                android:id="@+id/btn_pass"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background"
+                android:padding="8dp"
+                android:text="审批通过"
+                android:textColor="@color/white"
+                android:textSize="13sp"/>
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

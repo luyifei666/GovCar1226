@@ -43,9 +43,10 @@ public class SectionAdapter extends BaseSectionQuickAdapter<MySection, BaseViewH
         mContext = MainApplication.getContext();
         Video video = (Video) item.t;
         Glide.with(mContext).
-                load(video.getImg()).crossFade()
-                .error(R.mipmap.m_img1)//加载错误的替换图
-                .diskCacheStrategy(DiskCacheStrategy.RESULT)//缓存最终图片
+                load(video.getImg())
+//                .crossFade()
+//                .error(R.mipmap.m_img1)//加载错误的替换图
+//                .diskCacheStrategy(DiskCacheStrategy.RESULT)//缓存最终图片
                 .into((ImageView) helper.getView(R.id.iv));
         Log.e("aaa", "img = " + video.getImg().toString());
 //        switch (helper.getLayoutPosition() % 2) {
