@@ -22,10 +22,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.clfsjkj.govcar.ApplayOrderDetailActivity;
 import com.clfsjkj.govcar.ApplyCarActivity;
-import com.clfsjkj.govcar.ApplyRecordActivity;
+import com.clfsjkj.govcar.ApplyRecordListActivity;
+import com.clfsjkj.govcar.ApprovalRecordListActivity;
+import com.clfsjkj.govcar.CostAggregationActivity;
+import com.clfsjkj.govcar.CostQueryReplyListActivity;
 import com.clfsjkj.govcar.DriverActivity;
+import com.clfsjkj.govcar.NeedDispatchCarsListActivity;
 import com.clfsjkj.govcar.R;
+import com.clfsjkj.govcar.UserEvaluationListActivity;
 import com.clfsjkj.govcar.adapter.MsgContentFragmentAdapter;
 import com.clfsjkj.govcar.base.BaseFragment;
 import com.clfsjkj.govcar.index.DefaultItemCallback;
@@ -155,7 +161,6 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
         initTab();
     }
 
-
     public int getAtyWidth(Context context) {
         try {
             DisplayMetrics mDm = new DisplayMetrics();
@@ -201,14 +206,53 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
         functionAdapter.setOnItemClickLitener(new OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                switch (position % 2) {
-                    case 0:
-                        Toast.makeText(mContext, "functionAdapter position = " + position, Toast.LENGTH_SHORT).show();
+                switch (allData.get(position).name) {
+                    case "申请用车":
                         it = new Intent(mContext, ApplyCarActivity.class);
+                        //从申请用车进去的，需要判断用车时间不能在此刻之前
+                        it.putExtra("needJudgeUseCarTime",true);
                         startActivity(it);
                         break;
-                    case 1:
-                        it = new Intent(mContext, ApplyRecordActivity.class);
+                    case "申请记录":
+                        it = new Intent(mContext, ApplyRecordListActivity.class);
+                        startActivity(it);
+                        break;
+                    case "订单补录":
+                        //从申请用车进去的，不需要判断用车时间不能在此刻之前
+                        it = new Intent(mContext, ApplyCarActivity.class);
+                        it.putExtra("needJudgeUseCarTime",false);
+                        startActivity(it);
+                        break;
+                    case "用车评价":
+                        it = new Intent(mContext, UserEvaluationListActivity.class);
+                        startActivity(it);
+                        break;
+                    case "费用汇总":
+                        it = new Intent(mContext, CostAggregationActivity.class);
+                        startActivity(it);
+                        break;
+                    case "质疑回复":
+                        it = new Intent(mContext, CostQueryReplyListActivity.class);
+                        startActivity(it);
+                        break;
+                    case "用车审批":
+                        it = new Intent(mContext, ApplayOrderDetailActivity.class);
+                        it.putExtra("isShowBtnGroup",true);
+                        startActivity(it);
+                        break;
+                    case "审批记录":
+                        it = new Intent(mContext, ApprovalRecordListActivity.class);
+                        it.putExtra("title","审批记录");
+                        startActivity(it);
+                        break;
+                    case "驳回记录":
+                        it = new Intent(mContext, ApprovalRecordListActivity.class);
+                        it.putExtra("title","驳回记录");
+                        startActivity(it);
+                        break;
+                    case "需要派车":
+                        it = new Intent(mContext, NeedDispatchCarsListActivity.class);
+                        it.putExtra("title","需要派车");
                         startActivity(it);
                         break;
                     default:

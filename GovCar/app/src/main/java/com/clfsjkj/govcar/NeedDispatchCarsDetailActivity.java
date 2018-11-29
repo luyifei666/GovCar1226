@@ -31,9 +31,6 @@ import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.view.CropImageView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,7 +38,7 @@ import butterknife.OnClick;
 
 import static com.clfsjkj.govcar.MainApplication.maxImgCount;
 
-public class ApplayOrderDetailActivity extends BaseActivity {
+public class NeedDispatchCarsDetailActivity extends BaseActivity {
 
     private static final int PERMISSION_CALL_PHONE_CONTACT = 0x001;
     private static final int PERMISSION_CALL_PHONE_USERTEL = 0x002;
@@ -70,13 +67,15 @@ public class ApplayOrderDetailActivity extends BaseActivity {
     private ArrayList<EnclosureBean> mDataList;
     private ArrayList<TimeLineBean> mTimeLineList;
     private boolean isShowBtnGroup;
+    private String mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_applay_order_detail);
+        setContentView(R.layout.activity_need_dispatch_car_detail);
         ButterKnife.bind(this);
         mContext = this;
+        mTitle = getIntent().getStringExtra("title");
         isShowBtnGroup = getIntent().getBooleanExtra("isShowBtnGroup", false);
         if (isShowBtnGroup) {
             btnStatus.setVisibility(View.VISIBLE);
@@ -136,7 +135,7 @@ public class ApplayOrderDetailActivity extends BaseActivity {
     }
 
     private void initMyToolBar() {
-        initToolBar(mToolbar, "订单详情", R.drawable.gank_ic_back_white);
+        initToolBar(mToolbar, mTitle, R.drawable.gank_ic_back_white);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -162,6 +161,8 @@ public class ApplayOrderDetailActivity extends BaseActivity {
     }
 
     private void initWidget() {
+        btnReject.setText("拒绝派车");
+        btnPass.setText("立即派车");
         recyclerView.setLayoutManager(new GridLayoutManager(this, 4) {
             @Override
             public boolean canScrollVertically() {
@@ -185,6 +186,15 @@ public class ApplayOrderDetailActivity extends BaseActivity {
             }
         });
 
+        btnPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到选择车辆的页面
+                Intent it =  new Intent(NeedDispatchCarsDetailActivity.this,DispatchCarsActivity.class);
+                startActivity(it);
+            }
+        });
+
     }
 
     private void initAdapter() {
@@ -192,7 +202,7 @@ public class ApplayOrderDetailActivity extends BaseActivity {
         for (EnclosureBean bean : mDataList) {
             list.add(bean.getPicUrl());
         }
-        BaseQuickAdapter enclosureAdapter = new EnclosureAdapter(R.layout.enclosure_list_item, mDataList, ApplayOrderDetailActivity.this);
+        BaseQuickAdapter enclosureAdapter = new EnclosureAdapter(R.layout.enclosure_list_item, mDataList, NeedDispatchCarsDetailActivity.this);
         enclosureAdapter.openLoadAnimation();
         enclosureAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
@@ -219,7 +229,7 @@ public class ApplayOrderDetailActivity extends BaseActivity {
                         ToastUtils.showShortToast("您拒绝了打电话的权限，将无法拨打电话.");
                     } else {
                         // 申请授权。
-                        ActivityCompat.requestPermissions(ApplayOrderDetailActivity.this, new String[]{Manifest.permission.CALL_PHONE}, PERMISSION_CALL_PHONE_CONTACT);
+                        ActivityCompat.requestPermissions(NeedDispatchCarsDetailActivity.this, new String[]{Manifest.permission.CALL_PHONE}, PERMISSION_CALL_PHONE_CONTACT);
                     }
                 } else {
                     // 有权限了，去放肆吧。
@@ -234,7 +244,7 @@ public class ApplayOrderDetailActivity extends BaseActivity {
                         ToastUtils.showShortToast("您拒绝了打电话的权限，将无法拨打电话.");
                     } else {
                         // 申请授权。
-                        ActivityCompat.requestPermissions(ApplayOrderDetailActivity.this, new String[]{Manifest.permission.CALL_PHONE}, PERMISSION_CALL_PHONE_USERTEL);
+                        ActivityCompat.requestPermissions(NeedDispatchCarsDetailActivity.this, new String[]{Manifest.permission.CALL_PHONE}, PERMISSION_CALL_PHONE_USERTEL);
                     }
                 } else {
                     // 有权限了，去放肆吧。

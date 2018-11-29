@@ -311,6 +311,33 @@
                 android:padding="4dp">
 
                 <TextView
+                    android:id="@+id/tv2"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:paddingLeft="18dp"
+                    android:text="请选择地点和时间"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv2"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/line_color"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <TextView
                     android:id="@+id/tv_car_start"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="80dp"
@@ -461,33 +488,6 @@
                         android:maxLines="5"
                         android:textSize="13sp"/>
                 </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp">
-
-                <TextView
-                    android:id="@+id/tv2"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_alignParentLeft="true"
-                    android:gravity="left"
-                    android:paddingLeft="18dp"
-                    android:text="请选择用车时间"
-                    android:textSize="15sp"
-                    android:textStyle="bold"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/tv2"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:background="@color/line_color"/>
 
             </RelativeLayout>
 

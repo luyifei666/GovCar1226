@@ -73,6 +73,8 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
     private String addr;//地名
     private String addrDes;//地址
     private TimePickerView pvTime;
+    private boolean needJudgeUseCarTime;//是否需要判断用车时间与此刻的关系（正常申请需要判断、补录订单不需要）
+    private String mNowTime;//当前时间
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.recyclerView)
@@ -108,6 +110,11 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
         setContentView(R.layout.activity_apply_car);
         ButterKnife.bind(this);
         mContext = this;
+        needJudgeUseCarTime = getIntent().getBooleanExtra("needJudgeUseCarTime", false);
+        Log.e("aaa", "needJudgeUseCarTime = " + needJudgeUseCarTime);
+        if (!needJudgeUseCarTime) {
+            mBtnCarApply.setText("补录订单");
+        }
         initMyToolBar();
         setStatusBarFullTransparent();
         setFitSystemWindow(true);
@@ -266,7 +273,6 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.e("aaa", "onActivityResult resultCode = " + resultCode + "resultCode == Integer.valueOf(REQUEST_CODE_START)" + (resultCode == Integer.valueOf(REQUEST_CODE_START)));
         if (resultCode == ImagePicker.RESULT_CODE_ITEMS) {
             //添加图片返回
             if (data != null && requestCode == REQUEST_CODE_SELECT) {
@@ -292,21 +298,17 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
             mSearchLon = data.getStringExtra("lon");
             addr = data.getStringExtra("addr");
             addrDes = data.getStringExtra("addrDes");
-            Log.e("aaa", "onActivityResult mSearchLat = " + mSearchLat + ",mSearchLon = " + mSearchLon + ",addr = " + addr + ",addrDes = " + addrDes);
             if (null == addrDes) {
                 mEtCarStart.setText(addr);
             } else {
                 mEtCarStart.setText(addrDes + addr);
             }
-//            mEtCarPath.setText("mSearchLat = " + mSearchLat);
-//            mEtCarDestination.setText("mSearchLon = " + mSearchLon);
         } else if (resultCode == Integer.valueOf(REQUEST_CODE_PATH) && data != null) {
             //途径地
             mSearchLat = data.getStringExtra("lat");
             mSearchLon = data.getStringExtra("lon");
             addr = data.getStringExtra("addr");
             addrDes = data.getStringExtra("addrDes");
-            Log.e("aaa", "onActivityResult mSearchLat = " + mSearchLat + ",mSearchLon = " + mSearchLon + ",addr = " + addr + ",addrDes = " + addrDes);
             if (null == addrDes) {
                 mEtCarPath.setText(addr);
             } else {
@@ -318,7 +320,6 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
             mSearchLon = data.getStringExtra("lon");
             addr = data.getStringExtra("addr");
             addrDes = data.getStringExtra("addrDes");
-            Log.e("aaa", "onActivityResult mSearchLat = " + mSearchLat + ",mSearchLon = " + mSearchLon + ",addr = " + addr + ",addrDes = " + addrDes);
             if (null == addrDes) {
                 mEtCarDestination.setText(addr);
             } else {
@@ -482,17 +483,41 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
             case R.id.btn_car_apply:
                 String mStartTime = mTvStartTime.getText().toString();
                 String mBackTime = mTvBackTime.getText().toString();
-                int res = mStartTime.compareTo(mBackTime);
-                if (res > 0) {
-                    Log.e("aaa", "mStartTime>mBackTime");
-                    Snackbar snackbar = Snackbar.make(mBtnCarApply, "回车时间不能小于出车时间", Snackbar.LENGTH_SHORT);
-                    snackbar.getView().setBackgroundResource(R.color.colorPrimary);
-                    snackbar.show();
-                } else if (res == 0) {
-                    Log.e("aaa", "mStartTime=mBackTime");
+                if (needJudgeUseCarTime) {
+                    mNowTime = getTime(new Date());
+                    int result = mNowTime.compareTo(mStartTime);
+                    if (result > 0) {
+                        Log.e("aaa", "mNowTime>mStartTime");
+                        Snackbar snackbar = Snackbar.make(mBtnCarApply, "出车时间不能早于当前时间", Snackbar.LENGTH_SHORT);
+                        snackbar.getView().setBackgroundResource(R.color.colorPrimary);
+                        snackbar.show();
+                    } else {
+                        int res = mStartTime.compareTo(mBackTime);
+                        if (res > 0) {
+                            Log.e("aaa", "mStartTime>mBackTime");
+                            Snackbar snackbar = Snackbar.make(mBtnCarApply, "回车时间不能小于出车时间", Snackbar.LENGTH_SHORT);
+                            snackbar.getView().setBackgroundResource(R.color.colorPrimary);
+                            snackbar.show();
+                        } else if (res == 0) {
+                            Log.e("aaa", "mStartTime=mBackTime");
+                        } else {
+                            Log.e("aaa", "mStartTime<mBackTime");
+                        }
+                    }
                 } else {
-                    Log.e("aaa", "mStartTime<mBackTime");
+                    int res = mStartTime.compareTo(mBackTime);
+                    if (res > 0) {
+                        Log.e("aaa", "mStartTime>mBackTime");
+                        Snackbar snackbar = Snackbar.make(mBtnCarApply, "回车时间不能小于出车时间", Snackbar.LENGTH_SHORT);
+                        snackbar.getView().setBackgroundResource(R.color.colorPrimary);
+                        snackbar.show();
+                    } else if (res == 0) {
+                        Log.e("aaa", "mStartTime=mBackTime");
+                    } else {
+                        Log.e("aaa", "mStartTime<mBackTime");
+                    }
                 }
+
                 break;
         }
 

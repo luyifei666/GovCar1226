@@ -1,5 +1,6 @@
 package com.clfsjkj.govcar.ItemAdapter;
 
+import android.content.Context;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
@@ -12,14 +13,15 @@ import com.kevin.photo_browse.main.GlideApp;
 import java.util.List;
 
 public class EnclosureAdapter extends BaseQuickAdapter<EnclosureBean, BaseViewHolder> {
+    private Context mContext;
 
-    public EnclosureAdapter(int layoutResId, @Nullable List<EnclosureBean> data) {
+    public EnclosureAdapter(int layoutResId, @Nullable List<EnclosureBean> data, Context mContext) {
         super(layoutResId, data);
+        this.mContext = mContext;
     }
 
     @Override
     protected void convert(BaseViewHolder helper, EnclosureBean item) {
-        mContext = MainApplication.getContext();
         GlideApp.with(mContext)
                 .load(item.getPicUrl())
                 .thumbnail(0.1f)

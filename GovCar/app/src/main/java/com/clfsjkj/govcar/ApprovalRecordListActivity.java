@@ -25,7 +25,7 @@ import com.clfsjkj.govcar.base.BaseActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ApplyRecordActivity extends BaseActivity implements BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
+public class ApprovalRecordListActivity extends BaseActivity implements BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
     @BindView(R.id.right_btn)
     Button mRightBtn;
     @BindView(R.id.right_text)
@@ -44,13 +44,15 @@ public class ApplyRecordActivity extends BaseActivity implements BaseQuickAdapte
     private int mCurrentCounter = 0;
     private boolean isErr;
     private boolean mLoadMoreEndGone = false;
+    private String mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apply_record);
+        setContentView(R.layout.activity_approval_record);
         ButterKnife.bind(this);
         mContext = this;
+        mTitle = getIntent().getStringExtra("title");
         mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipeLayout);
         mSwipeLayout.setOnRefreshListener(this);
         mSwipeLayout.setColorSchemeColors(Color.rgb(47, 223, 189));
@@ -64,7 +66,7 @@ public class ApplyRecordActivity extends BaseActivity implements BaseQuickAdapte
     }
 
     private void initMyToolBar() {
-        initToolBar(mToolbar, "申请记录", R.drawable.gank_ic_back_white);
+        initToolBar(mToolbar, mTitle, R.drawable.gank_ic_back_white);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -85,7 +87,7 @@ public class ApplyRecordActivity extends BaseActivity implements BaseQuickAdapte
                 mLoadMoreEndGone = true;
                 pullToRefreshAdapter.setLoadMoreView(new CustomLoadMoreView());
                 mRvList.setAdapter(pullToRefreshAdapter);
-                Toast.makeText(ApplyRecordActivity.this, "change complete", Toast.LENGTH_LONG).show();
+                Toast.makeText(ApprovalRecordListActivity.this, "change complete", Toast.LENGTH_LONG).show();
             }
         });
         pullToRefreshAdapter.addHeaderView(headView);
@@ -107,7 +109,7 @@ public class ApplyRecordActivity extends BaseActivity implements BaseQuickAdapte
                     pullToRefreshAdapter.loadMoreComplete();
                 } else {
                     isErr = true;
-                    Toast.makeText(ApplyRecordActivity.this, R.string.network_err, Toast.LENGTH_LONG).show();
+                    Toast.makeText(ApprovalRecordListActivity.this, R.string.network_err, Toast.LENGTH_LONG).show();
                     pullToRefreshAdapter.loadMoreFail();
 
                 }
@@ -142,16 +144,11 @@ public class ApplyRecordActivity extends BaseActivity implements BaseQuickAdapte
         mRvList.addOnItemTouchListener(new OnItemClickListener() {
             @Override
             public void onSimpleItemClick(final BaseQuickAdapter adapter, final View view, final int position) {
-                Toast.makeText(ApplyRecordActivity.this, Integer.toString(position), Toast.LENGTH_SHORT).show();
-                //跳转到申请详情，当状态为XX时可修改，否则不可修改
                 Intent it;
-                if (position%2==1){
-                    it = new Intent(ApplyRecordActivity.this,ApplyCarActivity.class);
-                    startActivity(it);
-                }else {
-                    it = new Intent(ApplyRecordActivity.this,ApplayOrderDetailActivity.class);
-                    startActivity(it);
-                }
+                it = new Intent(ApprovalRecordListActivity.this, ApplayOrderDetailActivity.class);
+                it.putExtra("isShowBtnGroup",false);
+                startActivity(it);
+
             }
         });
     }
