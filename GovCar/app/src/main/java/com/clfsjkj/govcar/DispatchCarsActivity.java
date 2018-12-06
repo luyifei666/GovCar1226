@@ -1,31 +1,28 @@
 package com.clfsjkj.govcar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.clfsjkj.govcar.ItemAdapter.EnclosureAdapter;
 import com.clfsjkj.govcar.ItemAdapter.SelectedCarsAdapter;
-import com.clfsjkj.govcar.ItemAdapter.TimeLineAdapter;
 import com.clfsjkj.govcar.base.BaseActivity;
 import com.clfsjkj.govcar.bean.CarAndDriverBean;
-import com.clfsjkj.govcar.bean.EnclosureBean;
-import com.kevin.photo_browse.ImageBrowseIntent;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class DispatchCarsActivity extends BaseActivity {
+    //需要派车页面
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
@@ -90,12 +87,6 @@ public class DispatchCarsActivity extends BaseActivity {
         //解决数据加载不完的问题
         recyclerViewSelected.setNestedScrollingEnabled(false);
         recyclerViewSelected.setHasFixedSize(true);
-        btnPass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //跳转到选择车辆的页面
-            }
-        });
 
     }
 
@@ -126,9 +117,26 @@ public class DispatchCarsActivity extends BaseActivity {
         bean.setCarNum("云A00006");
         bean.setDriverName("张三6");
         data.add(bean);
-        adapter = new SelectedCarsAdapter(mContext,data);
+        adapter = new SelectedCarsAdapter(mContext, data);
         recyclerViewSelected.setAdapter(adapter);
     }
 
 
+    @OnClick({R.id.ll_select, R.id.btn_reject, R.id.btn_pass})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_select:
+                //跳转到选择车辆页面
+                Intent it = new Intent(DispatchCarsActivity.this,SelectCarActivity.class);
+                startActivity(it);;
+                finish();
+                break;
+            case R.id.btn_reject:
+                //下发车队
+                break;
+            case R.id.btn_pass:
+                //调接口传数据，派车成功
+                break;
+        }
+    }
 }

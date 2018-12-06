@@ -47,7 +47,8 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="vq6NKUs4MGfYO2WNBIbAX4m5fpseVM6k" />
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -126,56 +127,80 @@
 
         <activity
             android:name=".DriverActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ApplyCarActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".BaiduMapPoiActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ApplyRecordListActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ApplayOrderDetailActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".UserEvaluationListActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".UserEvaluationActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".CostAggregationActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".CostQueryActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".CostQueryReplyListActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".CostQueryReplyDetailActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".ApprovalRecordListActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".NeedDispatchCarsListActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".NeedDispatchCarsDetailActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".DispatchCarsActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CostAggregationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CostQueryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CostQueryReplyListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CostQueryReplyDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ApprovalRecordListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".NeedDispatchCarsListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".NeedDispatchCarsDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DispatchCarsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SelectCarActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SelectDriverActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".NeedCarBackListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DriverOrderListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

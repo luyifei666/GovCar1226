@@ -1,6 +1,8 @@
 package com.clfsjkj.govcar;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -11,15 +13,26 @@ import com.baidu.mapapi.map.MapView;
 import com.clfsjkj.govcar.base.BaseActivity;
 import com.clfsjkj.govcar.customerview.SlideRightViewDragHelper;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class DriverActivity extends BaseActivity {
+
+
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
     private SlideRightViewDragHelper swipe_right;
     private TextView start_guide;
     private MapView mMapView;
     private BaiduMap mBaiduMap;
+    private Context mContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver);
+        ButterKnife.bind(this);
+        mContext = this;
+        initMyToolBar();
         setStatusBarFullTransparent();
         setFitSystemWindow(true);
         swipe_right = (SlideRightViewDragHelper) findViewById(R.id.swipe_right);
@@ -41,6 +54,17 @@ public class DriverActivity extends BaseActivity {
         });
         mMapView = (MapView) findViewById(R.id.map);
         mBaiduMap = mMapView.getMap();
+    }
+    private void initMyToolBar() {
+        initToolBar(mToolbar, "任务详情", R.drawable.gank_ic_back_white);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();//返回
+            }
+        });
     }
 
     @Override

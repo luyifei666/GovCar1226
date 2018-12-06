@@ -191,6 +191,7 @@ public class NeedDispatchCarsDetailActivity extends BaseActivity {
             public void onClick(View v) {
                 //跳转到选择车辆的页面
                 Intent it =  new Intent(NeedDispatchCarsDetailActivity.this,DispatchCarsActivity.class);
+                it.putExtra("title","派遣车辆");
                 startActivity(it);
             }
         });

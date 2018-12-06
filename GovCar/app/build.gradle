@@ -10,6 +10,8 @@ android {
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        //添加如下配置就OK了
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
 
     signingConfigs {//签名信息
@@ -46,6 +48,9 @@ android {
         debug {
             signingConfig signingConfigs.release
         }
+    }
+    lintOptions {
+        abortOnError false
     }
 }
 
@@ -87,4 +92,7 @@ dependencies {
     implementation 'com.contrarywind:Android-PickerView:4.1.6'
     //网图加载module
     implementation project(':photo-browse')
+    implementation project(':NaviTts')
+    implementation project(':onsdk_all')
+    implementation files('libs/protobuf-java-2.3.0-micro.jar')
 }
