@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.clfsjkj.govcar">
 
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -43,9 +50,25 @@
         <meta-data
             android:name="UPDATE_APP_KEY"
             android:value="ab55ce55Ac4bcP408cPb8c1Aaeac179c5f6f" />
+        <!--//百度语音识别KEY-->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="14327542" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="vq6NKUs4MGfYO2WNBIbAX4m5fpseVM6k" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="t927FBwALakbw3mRcYehGHn2KTIAsKv2 " />
+        <!--//百度地图key-->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="vq6NKUs4MGfYO2WNBIbAX4m5fpseVM6k" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
 
         <activity
             android:name=".MainActivity"
@@ -199,6 +222,35 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".DriverOrderListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DemoMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DemoGuideActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DemoNaviSettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CarBackActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".NeedChangeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DispatchedCarsListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DispathedOrderDetailActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="adjustPan" />
     </application>

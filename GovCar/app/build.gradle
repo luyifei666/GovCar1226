@@ -12,6 +12,12 @@ android {
         multiDexEnabled true
         //添加如下配置就OK了
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi'
+            //, 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+
+        }
     }
 
     signingConfigs {//签名信息
@@ -92,7 +98,14 @@ dependencies {
     implementation 'com.contrarywind:Android-PickerView:4.1.6'
     //网图加载module
     implementation project(':photo-browse')
+    //百度导航
     implementation project(':NaviTts')
     implementation project(':onsdk_all')
     implementation files('libs/protobuf-java-2.3.0-micro.jar')
+    implementation files('libs/EventBus.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/galaxy_lite.jar')
+    implementation files('libs/httpmime-4.1.2.jar')
+    implementation files('libs/javapoet-1.9.0.jar')
+    implementation files('libs/org.apache.http.legacy.jar')
 }

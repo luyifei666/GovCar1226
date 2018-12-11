@@ -67,6 +67,7 @@ import com.yanzhenjie.permission.Rationale;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -309,7 +310,7 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
      */
     public void showBound(LatLngBounds bounds) {
         BitmapDescriptor bdGround = BitmapDescriptorFactory.fromResource(R.drawable.ground_overlay);
-
+//以定位点为圆心画圆
         OverlayOptions ooGround = new GroundOverlayOptions()
                 .positionFromBounds(bounds)
                 .image(bdGround)
@@ -462,7 +463,7 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
         // 构建MarkerOption，用于在地图上添加Marker.
         OverlayOptions options = new MarkerOptions().position(latLng).icon(bitmapDescriptor);
         // 在地图上添加Marker，并显示
-        //mBaiduMap.addOverlay(options);
+        mBaiduMap.addOverlay(options);
         Marker marker = (Marker) (mBaiduMap.addOverlay(options));
 
         //描述地图状态将要发生的变化,通过当前经纬度来使地图显示到该位置
@@ -631,11 +632,13 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
             mCurrentLon = location.getLongitude();
             Log.e("aaa", "mCurrentLat = " + mCurrentLat + ",mCurrentLon = " + mCurrentLon);
             mCurrentAccracy = location.getRadius();
+            Log.e("aaa","mCurrentAccracy = " + mCurrentAccracy);
             locData = new MyLocationData.Builder()
                     .accuracy(location.getRadius())
                     // 此处设置开发者获取到的方向信息，顺时针0-360
                     .direction(mCurrentDirection).latitude(location.getLatitude())
                     .longitude(location.getLongitude()).build();
+            Log.e("aaa","location.getRadius() = "+location.getRadius());
             mBaiduMap.setMyLocationData(locData);
             if (isFirstLoc) {
                 isFirstLoc = false;

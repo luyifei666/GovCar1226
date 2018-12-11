@@ -50,6 +50,7 @@ public class DriverActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(DriverActivity.this,"点击了开始导航",Toast.LENGTH_SHORT).show();
+
             }
         });
         mMapView = (MapView) findViewById(R.id.map);

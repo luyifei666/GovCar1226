@@ -25,8 +25,9 @@ public class SelectedCarsAdapter extends RecyclerView.Adapter {
     private Context context;
     private Boolean isEdit = false;
 
-    public SelectedCarsAdapter(Context context, @NonNull List<CarAndDriverBean> data) {
+    public SelectedCarsAdapter(Context context, @NonNull List<CarAndDriverBean> data,Boolean isEdit) {
         this.context = context;
+        this.isEdit = isEdit;
         if (data != null) {
             this.data = data;
         }
@@ -59,7 +60,12 @@ public class SelectedCarsAdapter extends RecyclerView.Adapter {
         final int index = position;
         SelectedViewHolder holder = (SelectedViewHolder) viewHolder;
 
-        holder.btn.setImageResource(R.drawable.ic_block_delete);
+        if (isEdit){
+            holder.btn.setVisibility(View.VISIBLE);
+            holder.btn.setImageResource(R.drawable.ic_block_delete);
+        }else {
+            holder.btn.setVisibility(View.GONE);
+        }
         holder.carNum.setText(data.get(position).getCarNum());
         holder.driverName.setText(data.get(position).getDriverName());
         holder.btn.setOnClickListener(new View.OnClickListener() {

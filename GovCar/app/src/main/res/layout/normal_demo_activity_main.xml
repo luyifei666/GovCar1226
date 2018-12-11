@@ -1,0 +1,104 @@
+<!--
+  ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/backgroundColor">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.baidu.mapapi.map.MapView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom">
+
+            <!--底部布局-->
+            <TextView
+                android:id="@+id/start_guide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/menu_green"
+                android:gravity="center"
+                android:text="  √   开始导航"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"/>
+
+            <!--要滑动的布局-->
+            <com.clfsjkj.govcar.customerview.SlideRightViewDragHelper
+                android:id="@+id/swipe_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@color/blue_white"
+                    android:gravity="center_horizontal"
+                    android:text="接到乘客     >>"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"/>
+
+            </com.clfsjkj.govcar.customerview.SlideRightViewDragHelper>
+
+
+        </FrameLayout>
+
+        <!--<Button-->
+            <!--android:id="@+id/wgsNaviBtn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="国际经纬度坐标" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/gcjNaviBtn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="国测局坐标" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bdmcNaviBtn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="百度墨卡托坐标" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/mDb06llNaviBtn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="百度经纬度坐标" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/mGotoSettingsBtn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:text="导航设置" />-->
+    </LinearLayout>
+
+</LinearLayout>

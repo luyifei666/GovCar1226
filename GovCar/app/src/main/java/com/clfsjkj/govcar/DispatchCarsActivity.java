@@ -117,7 +117,7 @@ public class DispatchCarsActivity extends BaseActivity {
         bean.setCarNum("云A00006");
         bean.setDriverName("张三6");
         data.add(bean);
-        adapter = new SelectedCarsAdapter(mContext, data);
+        adapter = new SelectedCarsAdapter(mContext, data,true);//是否可删除，是
         recyclerViewSelected.setAdapter(adapter);
     }
 

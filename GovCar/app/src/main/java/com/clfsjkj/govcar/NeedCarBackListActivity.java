@@ -9,6 +9,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -53,8 +54,8 @@ public class NeedCarBackListActivity extends BaseActivity implements BaseQuickAd
         ButterKnife.bind(this);
         mContext = this;
         mTitle = getIntent().getStringExtra("title");
-        mSwipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipeLayout);
         mSwipeLayout.setOnRefreshListener(this);
+        Log.e("aaa","NeedCarBackListActivity 需要回车 mTitle = " + mTitle);
         mSwipeLayout.setColorSchemeColors(Color.rgb(47, 223, 189));
         mRvList.setLayoutManager(new LinearLayoutManager(this));
 //        setTitle("Pull TO Refresh Use");
@@ -146,7 +147,7 @@ public class NeedCarBackListActivity extends BaseActivity implements BaseQuickAd
             public void onSimpleItemClick(final BaseQuickAdapter adapter, final View view, final int position) {
                 Intent it;
                 it = new Intent(NeedCarBackListActivity.this, CarBackActivity.class);
-                it.putExtra("isShowBtnGroup",true);
+//                it.putExtra("isShowBtnGroup",true);
                 it.putExtra("title","需要派车");
                 startActivity(it);
 

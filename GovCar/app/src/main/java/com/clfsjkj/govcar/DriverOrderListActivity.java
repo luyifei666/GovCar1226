@@ -143,7 +143,7 @@ public class DriverOrderListActivity extends BaseActivity implements BaseQuickAd
             @Override
             public void onSimpleItemClick(final BaseQuickAdapter adapter, final View view, final int position) {
                 Intent it;
-                it = new Intent(DriverOrderListActivity.this, DriverActivity.class);
+                it = new Intent(DriverOrderListActivity.this, DemoMainActivity.class);
                 startActivity(it);
 
             }
