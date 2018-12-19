@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/main_color"
+    android:orientation="vertical"
     tools:context=".BaiduMapPoiActivity">
 
     <LinearLayout
@@ -14,19 +13,20 @@
         android:layout_height="match_parent"
         android:background="@color/backgroundColor"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/dp_50"
             android:background="@color/main_color">
 
             <Button
                 android:id="@+id/btn_back"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_14"
                 android:background="@drawable/gank_ic_back_white" />
 
 
@@ -36,16 +36,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:textColor="@color/gank_text1_color"
-                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:background="@color/main_color"
                 android:text="@string/ok"
-                android:background="@color/main_color"/>
+                android:textColor="@color/gank_text1_color"
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="34dp"
+                android:layout_height="@dimen/dp_34"
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@id/btn_ok"
                 android:layout_toRightOf="@id/btn_back">
@@ -54,11 +54,11 @@
                     android:id="@+id/titile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:layout_marginLeft="@dimen/dp_10"
                     android:paddingTop="@dimen/dp_4"
                     android:textColor="@color/gank_text1_color"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:textStyle="bold"/>
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -67,7 +67,7 @@
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
-            android:layout_height="50dip"
+            android:layout_height="@dimen/dp_50"
             android:orientation="horizontal">
 
             <AutoCompleteTextView
@@ -75,9 +75,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.88"
-                android:drawableLeft="@drawable/gank_icon_search_night"
                 android:completionThreshold="1"
-                android:hint="请输入地点"/>
+                android:drawableLeft="@drawable/gank_icon_search_night"
+                android:hint="请输入地点" />
         </LinearLayout>
 
         <RelativeLayout
@@ -87,8 +87,7 @@
             <com.baidu.mapapi.map.MapView
                 android:id="@+id/bmapView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </com.baidu.mapapi.map.MapView>
+                android:layout_height="match_parent"></com.baidu.mapapi.map.MapView>
 
             <ImageView
                 android:id="@+id/myloc"
@@ -97,10 +96,10 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="18dp"
-                android:layout_marginRight="18dp"
-                android:layout_marginBottom="143dp"
-                android:background="@mipmap/footbike_maplayout_icon_location"/>
+                android:layout_marginEnd="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_113"
+                android:background="@mipmap/footbike_maplayout_icon_location" />
         </RelativeLayout>
     </LinearLayout>
 

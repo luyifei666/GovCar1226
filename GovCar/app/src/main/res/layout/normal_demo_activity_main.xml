@@ -7,21 +7,21 @@
     android:layout_height="match_parent"
     android:background="@color/main_color"
     android:orientation="vertical">
-    <include layout="@layout/toolbar"/>
+
+    <include layout="@layout/toolbar" />
 
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/dp_0"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="@color/backgroundColor">
+        android:background="@color/backgroundColor"
+        android:orientation="vertical">
 
         <com.baidu.mapapi.map.MapView
             android:id="@+id/map"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </com.baidu.mapapi.map.MapView>
+            android:layout_height="match_parent"></com.baidu.mapapi.map.MapView>
 
 
     </LinearLayout>
@@ -34,7 +34,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/dp_60"
             android:layout_gravity="bottom">
 
             <!--底部布局-->
@@ -46,7 +46,7 @@
                 android:gravity="center"
                 android:text="  √   开始导航"
                 android:textColor="#FFFFFFFF"
-                android:textSize="20sp"/>
+                android:textSize="@dimen/sp_20" />
 
             <!--要滑动的布局-->
             <com.clfsjkj.govcar.customerview.SlideRightViewDragHelper
@@ -62,7 +62,7 @@
                     android:gravity="center_horizontal"
                     android:text="接到乘客     >>"
                     android:textColor="#FFFFFF"
-                    android:textSize="28sp"/>
+                    android:textSize="@dimen/sp_28" />
 
             </com.clfsjkj.govcar.customerview.SlideRightViewDragHelper>
 
@@ -70,35 +70,35 @@
         </FrameLayout>
 
         <!--<Button-->
-            <!--android:id="@+id/wgsNaviBtn"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="国际经纬度坐标" />-->
+        <!--android:id="@+id/wgsNaviBtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="国际经纬度坐标" />-->
 
         <!--<Button-->
-            <!--android:id="@+id/gcjNaviBtn"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="国测局坐标" />-->
+        <!--android:id="@+id/gcjNaviBtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="国测局坐标" />-->
 
         <!--<Button-->
-            <!--android:id="@+id/bdmcNaviBtn"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="百度墨卡托坐标" />-->
+        <!--android:id="@+id/bdmcNaviBtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="百度墨卡托坐标" />-->
 
         <!--<Button-->
-            <!--android:id="@+id/mDb06llNaviBtn"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="百度经纬度坐标" />-->
+        <!--android:id="@+id/mDb06llNaviBtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="百度经纬度坐标" />-->
 
         <!--<Button-->
-            <!--android:id="@+id/mGotoSettingsBtn"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="20dp"-->
-            <!--android:text="导航设置" />-->
+        <!--android:id="@+id/mGotoSettingsBtn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:text="导航设置" />-->
     </LinearLayout>
 
 </LinearLayout>

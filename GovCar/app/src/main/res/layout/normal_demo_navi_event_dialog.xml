@@ -5,27 +5,27 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center" >
-    
-    <ImageView 
+
+    <ImageView
         android:id="@+id/enlarge_view_img"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:visibility="gone"/>
-    <LinearLayout 
+    <LinearLayout
         android:id="@+id/route_guide_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center">
-        
-        <LinearLayout 
+
+        <LinearLayout
             android:id="@+id/time_distance_ll"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:gravity="center">
-            <TextView 
+            <TextView
                 android:id="@+id/remain_time_tx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -33,14 +33,14 @@
                 android:layout_marginRight="10dp"
                 android:text="明日到达"
                 />
-              <TextView 
+              <TextView
                 android:id="@+id/remain_distance_tx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="剩10公里"
                 />
-              <TextView 
+              <TextView
                   android:id="@+id/current_speed_tx"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -56,20 +56,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             >
-            <LinearLayout 
+            <LinearLayout
                 android:id="@+id/simple_go_ll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
                 >
-              <ImageView 
+              <ImageView
                 android:id="@+id/turn_img"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/navi_guide_turn"
                 />
-            <TextView 
+            <TextView
                 android:id="@+id/remain_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
@@ -78,7 +78,7 @@
                 android:layout_marginLeft="8dp"
                 android:text="100米"
                 />
-            <TextView 
+            <TextView
                 android:id="@+id/go_tx"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
@@ -87,9 +87,9 @@
                 android:gravity="center"
                 android:text="去往"
                 />
-                
-            </LinearLayout>  
-            
+
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/next_road_tx"
@@ -101,13 +101,13 @@
                 android:text="上地信息路"
                 />
         </RelativeLayout>
-        <RelativeLayout 
+        <RelativeLayout
             android:id="@+id/along_rl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
              >
-            <LinearLayout 
+            <LinearLayout
                 android:id="@+id/along_meter_ll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:text="顺行" />
-              <TextView 
+              <TextView
                 android:id="@+id/along_meters_tx"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
@@ -136,21 +136,21 @@
                 android:text="来广营东路"
                  />
         </RelativeLayout>
-       <LinearLayout 
+       <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         >
-        
-        <TextView 
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:text="GPS定位:"
             />
-       <TextView 
+       <TextView
            android:id="@+id/loacte_tx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

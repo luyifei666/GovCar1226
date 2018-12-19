@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".fragment.MsgFragment">
+
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="@dimen/dp_56"
         android:background="@color/main_color">
 
 
@@ -20,37 +21,37 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_15"
             android:gravity="center_vertical"
             android:text="@string/app_name"
             android:textColor="@color/gank_text1_color"
-            android:textSize="20sp"/>
+            android:textSize="@dimen/sp_20" />
 
         <TextView
             android:id="@+id/submit"
-            android:textSize="18sp"
-            android:layout_marginRight="10dp"
-            android:textColor="@color/gank_text1_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dp_10"
             android:gravity="center_vertical"
-            android:text="保存"/>
+            android:text="保存"
+            android:textColor="@color/gank_text1_color"
+            android:textSize="@dimen/sp_18" />
     </RelativeLayout>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="34dip"
+        android:layout_height="@dimen/dp_34"
         app:tabBackground="@color/white"
         app:tabIndicatorColor="@color/menu_green"
-        app:tabIndicatorHeight="1dip"
+        app:tabIndicatorHeight="@dimen/dp_1"
+        app:tabMinWidth="@dimen/dp_40"
         app:tabMode="scrollable"
-        app:tabMinWidth="40dip"
-        app:tabPaddingStart="5dip"
-        app:tabPaddingEnd="5dip"
+        app:tabPaddingEnd="@dimen/dp_5"
+        app:tabPaddingStart="@dimen/dp_5"
         app:tabSelectedTextColor="@color/wx_head_selected"
         app:tabTextAppearance="@style/tab_head"
         app:tabTextColor="@color/wx_head_default" />
@@ -59,7 +60,7 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dip"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_weight="1"
         android:background="@color/white" />
 </LinearLayout>

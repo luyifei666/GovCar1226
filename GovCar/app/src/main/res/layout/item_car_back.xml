@@ -27,10 +27,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:gravity="left"
-                    android:paddingLeft="18dp"
+                    android:paddingLeft="@dimen/dp_18"
                     android:text="订单号：1234567890987654321"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:textStyle="italic" />
 
                 <TextView
@@ -40,10 +40,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:gravity="right"
-                    android:paddingLeft="18dp"
+                    android:paddingLeft="@dimen/dp_18"
                     android:text="待审批"
                     android:textColor="@color/webview_progress_color"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:textStyle="italic" />
 
 
@@ -52,26 +52,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv1"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentLeft="true"
                     android:gravity="left"
-                    android:paddingLeft="18dp"
+                    android:paddingLeft="@dimen/dp_18"
                     android:text="订单信息"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/dp_1"
                     android:layout_below="@+id/tv1"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
                     android:background="@color/line_color" />
 
 
@@ -80,24 +80,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_unit0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="用车单位"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_unit0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_unit0"
                     android:background="@drawable/search_bg">
 
@@ -105,14 +105,14 @@
                         android:id="@+id/tv_car_use_unit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
                         android:text="中共文山市委机构编制办公室"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -120,24 +120,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_user0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="用车人"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_user0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_user0"
                     android:background="@drawable/search_bg">
 
@@ -145,14 +145,14 @@
                         android:id="@+id/tv_car_user"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
                         android:text="郭宗显"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -160,24 +160,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_starttime0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="出车时间"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_starttime0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_starttime0"
                     android:background="@drawable/search_bg">
 
@@ -185,14 +185,14 @@
                         android:id="@+id/tv_car_use_starttime"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
                         android:text="2018-09-26 09:30"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -200,24 +200,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_backtime0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="归队时间"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_backtime0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_backtime0"
                     android:background="@drawable/search_bg">
 
@@ -225,14 +225,14 @@
                         android:id="@+id/tv_car_use_backtime"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
                         android:text=" 2018-09-26 17:00"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -240,34 +240,34 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_start0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="出发地"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_start0"
-                    android:layout_width="270dp"
+                    android:layout_width="@dimen/dp_270"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_start0"
                     android:background="@drawable/search_bg"
-                    android:minHeight="40dp">
+                    android:minHeight="@dimen/dp_40">
 
                     <TextView
                         android:id="@+id/tv_car_use_start"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:drawableRight="@mipmap/icon_start"
                         android:gravity="center|left"
@@ -276,7 +276,7 @@
                         android:scrollbars="horizontal"
                         android:singleLine="false"
                         android:text="大姚县国有林场三岔河分场大姚县国有林场三岔河分场大姚县国有林场三岔河分场大姚县国有林场三岔河分场"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -284,34 +284,34 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_destination0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="目的地"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_destination0"
-                    android:layout_width="270dp"
+                    android:layout_width="@dimen/dp_270"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_destination0"
                     android:background="@drawable/search_bg"
-                    android:minHeight="40dp">
+                    android:minHeight="@dimen/dp_40">
 
                     <TextView
                         android:id="@+id/tv_car_use_destination"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:drawableRight="@mipmap/icon_end"
                         android:gravity="center|left"
@@ -320,7 +320,7 @@
                         android:scrollbars="horizontal"
                         android:singleLine="false"
                         android:text="三岔河镇背阴地村"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -328,25 +328,25 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_path0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
+                    android:layout_width="@dimen/dp_100"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:minHeight="40dp"
+                    android:minHeight="@dimen/dp_40"
                     android:text="途径地"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_path0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_path0"
                     android:background="@drawable/search_bg">
 
@@ -354,8 +354,8 @@
                         android:id="@+id/tv_car_use_path"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:drawableRight="@mipmap/icon_path"
                         android:gravity="center|left"
@@ -364,7 +364,7 @@
                         android:scrollbars="horizontal"
                         android:singleLine="false"
                         android:text="三岔河镇、背阴地村"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -372,26 +372,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv2"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentLeft="true"
                     android:gravity="left"
-                    android:paddingLeft="18dp"
+                    android:paddingLeft="@dimen/dp_18"
                     android:text="订单补充"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/dp_1"
                     android:layout_below="@+id/tv2"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
                     android:background="@color/line_color" />
 
 
@@ -400,24 +400,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_start_code0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="起始路码"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_start_code0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_start_code0"
                     android:background="@drawable/search_bg">
 
@@ -425,14 +425,14 @@
                         android:id="@+id/et_car_start_code"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -440,24 +440,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_end_code0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="终止路码"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_end_code0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_end_code0"
                     android:background="@drawable/search_bg">
 
@@ -465,14 +465,14 @@
                         android:id="@+id/et_car_end_code"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
                         android:inputType="number"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -480,24 +480,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_days0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="用车天数"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_days0"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_days0"
                     android:background="@drawable/search_bg">
 
@@ -505,14 +505,14 @@
                         android:id="@+id/et_car_use_days0"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -521,23 +521,23 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_gps_code0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="GPS里程"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_gps_code0"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@+id/tv_gps_code0"
                     android:background="@drawable/search_bg"
                     android:gravity="left">
@@ -546,23 +546,23 @@
                         android:id="@+id/tv_gps_code"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:imeOptions="actionDone"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
                 <Button
                     android:id="@+id/ck_suixing"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginRight="30dp"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:layout_marginRight="@dimen/dp_30"
                     android:background="@drawable/btn_background"
                     android:text="获取"
                     android:textColor="@color/white" />
@@ -572,24 +572,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_use_ermark0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="行驶备注"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_use_ermark0"
-                    android:layout_width="270dp"
-                    android:layout_height="120dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_120"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_use_ermark0"
                     android:background="@drawable/search_bg">
 
@@ -597,12 +597,12 @@
                         android:id="@+id/et_car_use_ermark"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:imeOptions="actionDone"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -610,26 +610,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv3"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentLeft="true"
                     android:gravity="left"
-                    android:paddingLeft="18dp"
+                    android:paddingLeft="@dimen/dp_18"
                     android:text="费用详情"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="@dimen/dp_1"
                     android:layout_below="@+id/tv3"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
                     android:background="@color/line_color" />
 
 
@@ -639,220 +639,220 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="2dp">
+                android:padding="@dimen/dp_2">
 
                 <TextView
                     android:id="@+id/tv_hotel_expense"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="住宿费"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_hotel_expense"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <TextView
                     android:id="@+id/tv_parking_fee"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="停车费"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_parking_fee"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="2dp">
+                android:padding="@dimen/dp_2">
 
                 <TextView
                     android:id="@+id/tv_road_fee"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="过路费"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_road_fee"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <TextView
                     android:id="@+id/tv_meal_fee"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="伙食费"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_meal_fee"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="2dp">
+                android:padding="@dimen/dp_2">
 
                 <TextView
                     android:id="@+id/tv_gas_fee"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="加油费"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_gas_fee"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <TextView
                     android:id="@+id/tv_wash_fee"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="洗车费"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_wash_fee"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="2dp">
+                android:padding="@dimen/dp_2">
 
                 <TextView
                     android:id="@+id/tv_occupy_fee"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
-                        android:text="占用费"
-                    android:textSize="13sp" />
+                    android:text="占用费"
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_occupy_fee"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <TextView
                     android:id="@+id/tv_orther_fee"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="其他"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <com.clfsjkj.govcar.customerview.MClearEditText
                     android:id="@+id/et_orther_fee"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_weight="1.2"
                     android:background="@drawable/search_bg"
                     android:gravity="center|left"
                     android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
             </LinearLayout>
 
 
@@ -865,28 +865,28 @@
                 <Button
                     android:id="@+id/btn_reject"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_margin="16dp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_margin="@dimen/dp_16"
                     android:layout_weight="1"
                     android:background="@drawable/btn_background"
-                    android:padding="8dp"
+                    android:padding="@dimen/dp_8"
                     android:text="确认归队"
                     android:textColor="@color/white"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <!--<Button-->
-                    <!--android:id="@+id/btn_pass"-->
-                    <!--style="?android:attr/borderlessButtonStyle"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="40dp"-->
-                    <!--android:layout_margin="16dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@drawable/btn_background"-->
-                    <!--android:padding="8dp"-->
-                    <!--android:text="审批通过"-->
-                    <!--android:textColor="@color/white"-->
-                    <!--android:textSize="13sp" />-->
+                <!--android:id="@+id/btn_pass"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:layout_width="@dimen/dp_0"-->
+                <!--android:layout_height="@dimen/dp_40"-->
+                <!--android:layout_margin="@dimen/dp_16"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/btn_background"-->
+                <!--android:padding="@dimen/dp_8"-->
+                <!--android:text="审批通过"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/sp_13" />-->
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

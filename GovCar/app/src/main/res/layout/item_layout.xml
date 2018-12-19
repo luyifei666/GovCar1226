@@ -9,19 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="6dp"
+        android:layout_margin="@dimen/dp_6"
         android:background="@drawable/bg_shape"
         android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingTop="7dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="7dp"
-        android:textSize="16sp" />
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_7"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_7"
+        android:textSize="@dimen/sp_16" />
 
     <ImageView
         android:id="@+id/iv"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
         android:layout_gravity="right|top"
         android:scaleType="centerCrop"
         android:src="@drawable/close" />

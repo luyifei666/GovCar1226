@@ -6,21 +6,21 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/dp_50"
         android:background="#EEEEEE">
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/dp_0_5"
             android:background="#aaa" />
 
         <ImageView
             android:id="@+id/iv_cancel"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="17dp"
-            android:padding="8dp"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:padding="@dimen/dp_8"
             android:src="@drawable/to_down" />
 
         <TextView
@@ -29,15 +29,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="17dp"
-            android:padding="8dp"
+            android:layout_marginRight="@dimen/dp_17"
+            android:padding="@dimen/dp_8"
             android:text="完成"
             android:textColor="#24AD9D"
-            android:textSize="18sp" />
+            android:textSize="@dimen/sp_18" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/dp_0_5"
             android:background="#aaa" />
     </RelativeLayout>
 

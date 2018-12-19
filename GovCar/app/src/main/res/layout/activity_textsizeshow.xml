@@ -16,34 +16,34 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/dp_15"
             android:gravity="center_vertical|right">
 
             <TextView
                 android:id="@+id/tv_chatcontent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="65dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="@dimen/dp_65"
+                android:layout_marginRight="@dimen/dp_10"
                 android:background="@drawable/chatto_bg_normal"
                 android:clickable="false"
                 android:focusable="false"
                 android:gravity="left|center_vertical"
-                android:lineSpacingExtra="2dp"
-                android:paddingLeft="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="13dp"
-                android:paddingBottom="5dp"
+                android:lineSpacingExtra="@dimen/dp_2"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_13"
+                android:paddingBottom="@dimen/dp_5"
                 android:text="预览字体大小"
                 android:textColor="#fff"
                 android:textCursorDrawable="@drawable/color_cursor"
-                android:textSize="15sp" />
+                android:textSize="@dimen/sp_15" />
 
             <ImageView
                 android:id="@+id/iv_userhead"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginRight="10dp"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginRight="@dimen/dp_10"
                 android:layout_toRightOf="@id/tv_chatcontent"
                 android:src="@mipmap/ic_launcher" />
         </RelativeLayout>
@@ -52,13 +52,13 @@
             android:id="@+id/content_msg_view"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp">
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15">
 
             <ImageView
                 android:id="@+id/iv_userhead1"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:src="@mipmap/ic_launcher" />
@@ -68,36 +68,36 @@
                 android:id="@+id/tv_chatcontent1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="65dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_65"
                 android:layout_toRightOf="@+id/iv_userhead1"
                 android:background="@drawable/chatfrom_bg_normal"
                 android:clickable="true"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/dp_10"
                 android:focusable="true"
                 android:gravity="left|center_vertical"
-                android:lineSpacingExtra="2dp"
-                android:paddingLeft="13dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
+                android:lineSpacingExtra="@dimen/dp_2"
+                android:paddingLeft="@dimen/dp_13"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
                 android:text="滑动下面的滑块调整字体大小"
                 android:textColor="@android:color/black"
                 android:textCursorDrawable="@drawable/color_cursor"
-                android:textSize="15sp" />
+                android:textSize="@dimen/sp_15" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp">
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15">
 
             <ImageView
                 android:id="@+id/iv_userhead3"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:src="@mipmap/ic_launcher" />
@@ -107,35 +107,35 @@
                 android:id="@+id/tv_chatcontent3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="65dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_65"
                 android:layout_toRightOf="@+id/iv_userhead3"
                 android:background="@drawable/chatfrom_bg_normal"
                 android:clickable="true"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/dp_10"
                 android:focusable="true"
                 android:gravity="left|center_vertical"
-                android:lineSpacingExtra="2dp"
-                android:paddingLeft="13dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
+                android:lineSpacingExtra="@dimen/dp_2"
+                android:paddingLeft="@dimen/dp_13"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
                 android:text="设置后，会改变所有模块中的字体大小。如果在使用过程中存在问题或意见，可反馈给xxx。"
                 android:textColor="@android:color/black"
                 android:textCursorDrawable="@drawable/color_cursor"
-                android:textSize="15sp" />
+                android:textSize="@dimen/sp_15" />
 
         </RelativeLayout>
 
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/dp_0"
             android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dp_100"
             android:background="@android:color/white">
 
             <com.clfsjkj.govcar.customerview.FontSliderBar
@@ -143,8 +143,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp" />
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_marginRight="@dimen/dp_50" />
         </LinearLayout>
     </LinearLayout>
 

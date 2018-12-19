@@ -7,17 +7,17 @@
 
     <ImageView
         android:id="@+id/img_tab"
-        android:layout_width="24dip"
-        android:layout_height="24dip"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
         android:src="@drawable/menu_msg_default" />
 
     <TextView
         android:id="@+id/txt_tab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dip"
+        android:layout_marginTop="@dimen/dp_2"
         android:text="首页"
         android:textColor="@drawable/txt_main_menu_selector"
-        android:textSize="11sp" />
+        android:textSize="@dimen/sp_11" />
 
 </LinearLayout>

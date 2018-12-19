@@ -21,26 +21,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv1"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentLeft="true"
                     android:gravity="left"
-                    android:paddingLeft="18dp"
+                    android:paddingLeft="@dimen/dp_18"
                     android:text="变更前信息"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_below="@+id/tv1"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
                     android:background="@color/line_color" />
 
 
@@ -49,24 +49,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_path0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="途径地"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_path"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_path0"
                     android:background="@drawable/search_bg">
 
@@ -74,15 +74,15 @@
                         android:id="@+id/tv_car_path"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:hint="变更前途径地"
                         android:imeOptions="actionDone"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -90,24 +90,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_start_time"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="用车时间"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_start_time"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_start_time"
                     android:background="@drawable/search_bg">
 
@@ -115,15 +115,15 @@
                         android:id="@+id/tv_start_time"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:hint="变更前用车时间"
                         android:imeOptions="actionDone"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -131,24 +131,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_car_back_time"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="回车时间"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_car_back_time"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_car_back_time"
                     android:background="@drawable/search_bg">
 
@@ -156,15 +156,15 @@
                         android:id="@+id/tv_back_time"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:hint="变更前回车时间"
                         android:imeOptions="actionDone"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -173,26 +173,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv2"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentLeft="true"
                     android:gravity="left"
-                    android:paddingLeft="18dp"
+                    android:paddingLeft="@dimen/dp_18"
                     android:text="变更后信息"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_below="@+id/tv2"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
                     android:background="@color/line_color" />
 
 
@@ -201,24 +201,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_real_car_path0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="途径地"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_real_car_path"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_real_car_path0"
                     android:background="@drawable/search_bg">
 
@@ -226,15 +226,15 @@
                         android:id="@+id/tv_real_car_path"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:hint="单击选择途径地"
                         android:imeOptions="actionDone"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -242,24 +242,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_real_car_start_time0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="用车时间"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_real_car_start_time"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_real_car_start_time0"
                     android:background="@drawable/search_bg">
 
@@ -267,15 +267,15 @@
                         android:id="@+id/tv_real_car_start_time"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:hint="请选择用车时间"
                         android:imeOptions="actionDone"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -283,24 +283,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:padding="@dimen/dp_4">
 
                 <TextView
                     android:id="@+id/tv_real_car_back_time0"
                     style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_40"
                     android:gravity="left"
                     android:text="回车时间"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/sp_13" />
 
                 <RelativeLayout
                     android:id="@+id/rl_real_car_back_time"
-                    android:layout_width="270dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/dp_270"
+                    android:layout_height="@dimen/dp_40"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dp_10"
                     android:layout_toRightOf="@id/tv_real_car_back_time0"
                     android:background="@drawable/search_bg">
 
@@ -308,20 +308,20 @@
                         android:id="@+id/tv_real_car_back_time"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@null"
                         android:gravity="center|left"
                         android:hint="请选择回车时间"
                         android:imeOptions="actionDone"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/sp_13" />
                 </RelativeLayout>
 
             </RelativeLayout>
 
-            <include layout="@layout/order_detail_button_group"/>
+            <include layout="@layout/order_detail_button_group" />
 
         </LinearLayout>
 

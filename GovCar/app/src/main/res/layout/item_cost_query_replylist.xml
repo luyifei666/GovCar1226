@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
+    android:layout_marginLeft="@dimen/dp_5"
+    android:layout_marginRight="@dimen/dp_5"
     android:foreground="?android:attr/selectableItemBackground"
     card_view:cardBackgroundColor="@color/item_bg"
-    card_view:cardCornerRadius="4dp"
+    card_view:cardCornerRadius="@dimen/dp_4"
     card_view:cardUseCompatPadding="true">
 
     <RelativeLayout
@@ -22,11 +22,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:elevation="10dp"
+            android:elevation="@dimen/dp_10"
             android:paddingLeft="@dimen/dp_10"
             android:text="单号：1234567890"
             android:textColorHighlight="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/sp_18"
             android:textStyle="italic"
             android:typeface="serif" />
 
