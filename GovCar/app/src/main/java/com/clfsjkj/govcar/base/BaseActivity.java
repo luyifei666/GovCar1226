@@ -1,9 +1,13 @@
 package com.clfsjkj.govcar.base;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,7 +20,14 @@ import android.view.WindowManager;
 
 import com.bigkoo.svprogresshud.SVProgressHUD;
 import com.bumptech.glide.Glide;
+import com.clfsjkj.govcar.MainApplication;
 import com.clfsjkj.govcar.R;
+import com.clfsjkj.govcar.alltextsize.MessageSocket;
+import com.clfsjkj.govcar.alltextsize.RxBus;
+
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
 
 import static com.lzy.imagepicker.util.Utils.getStatusHeight;
 
@@ -29,11 +40,20 @@ public class BaseActivity extends AppCompatActivity {
 
     private SVProgressHUD mSVProgressHUD;
     public Context mContext;
+    public Observable observable;//用于全局字体大小设置
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
+        observable = RxBus.getInstance().register(this.getClass().getSimpleName(), MessageSocket.class);
+        observable.observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<MessageSocket>() {
+
+            @Override
+            public void accept(MessageSocket message) throws Exception {
+                rxBusCall(message);
+            }
+        });
         initDialog();
     }
 
@@ -84,6 +104,47 @@ public class BaseActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
+    public void rxBusCall(MessageSocket message) {
+    }
+
+
+    public int getColorById(int resId) {
+        return ContextCompat.getColor(this, resId);
+    }
+
+
+    public void goActivity(Class<?> activity) {
+        Intent intent = new Intent();
+        intent.setClass(getApplicationContext(), activity);
+        startActivity(intent);
+    }
+
+    //重写字体缩放比例 api<25
+    @Override
+    public Resources getResources() {
+        Resources res = super.getResources();
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.N) {
+            Configuration config = res.getConfiguration();
+            config.fontScale = MainApplication.getMyInstance().getFontScale();//1 设置正常字体大小的倍数
+            res.updateConfiguration(config, res.getDisplayMetrics());
+        }
+        return res;
+    }
+
+    //重写字体缩放比例  api>25
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
+            final Resources res = newBase.getResources();
+            final Configuration config = res.getConfiguration();
+            config.fontScale = MainApplication.getMyInstance().getFontScale();//1 设置正常字体大小的倍数
+            final Context newContext = newBase.createConfigurationContext(config);
+            super.attachBaseContext(newContext);
+        } else {
+            super.attachBaseContext(newBase);
+        }
+    }
+
     /**
      * 全透状态栏
      */
@@ -98,7 +159,7 @@ public class BaseActivity extends AppCompatActivity {
         } else if (Build.VERSION.SDK_INT >= 19) {//19表示4.4
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             //虚拟键盘也透明
-            //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
     }
 
@@ -116,7 +177,7 @@ public class BaseActivity extends AppCompatActivity {
         } else if (Build.VERSION.SDK_INT >= 19) {//19表示4.4
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             //虚拟键盘也透明
-            // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
     }
 
@@ -149,7 +210,7 @@ public class BaseActivity extends AppCompatActivity {
                 for (int i = 0; i < drawerLayout.getChildCount(); i++) {
                     View child = drawerLayout.getChildAt(i);
                     child.setFitsSystemWindows(false);
-                    child.setPadding(0,statusBarHeight, 0, 0);
+                    child.setPadding(0, statusBarHeight, 0, 0);
                 }
 
             }
@@ -172,6 +233,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         dissmissProgressDialog();
         Glide.with(this.getApplicationContext()).pauseRequests();
+        RxBus.getInstance().unregister(this.getClass().getSimpleName(), observable);
         super.onDestroy();
     }
 

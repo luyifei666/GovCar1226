@@ -108,4 +108,7 @@ dependencies {
     implementation files('libs/httpmime-4.1.2.jar')
     implementation files('libs/javapoet-1.9.0.jar')
     implementation files('libs/org.apache.http.legacy.jar')
+    //RxAndroid  主要用于一键换全局字体大小
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 }

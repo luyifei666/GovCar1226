@@ -45,6 +45,12 @@ import com.baidu.mapapi.search.core.CityInfo;
 import com.baidu.mapapi.search.core.PoiDetailInfo;
 import com.baidu.mapapi.search.core.PoiInfo;
 import com.baidu.mapapi.search.core.SearchResult;
+import com.baidu.mapapi.search.geocode.GeoCodeOption;
+import com.baidu.mapapi.search.geocode.GeoCodeResult;
+import com.baidu.mapapi.search.geocode.GeoCoder;
+import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
+import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
+import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
 import com.baidu.mapapi.search.poi.OnGetPoiSearchResultListener;
 import com.baidu.mapapi.search.poi.PoiBoundSearchOption;
 import com.baidu.mapapi.search.poi.PoiDetailResult;
@@ -72,8 +78,8 @@ import java.util.logging.Level;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BaiduMapPoiActivity extends BaseActivity implements SensorEventListener, OnGetPoiSearchResultListener, OnGetSuggestionResultListener {
-
+public class BaiduMapPoiActivity extends BaseActivity implements SensorEventListener, OnGetPoiSearchResultListener, OnGetSuggestionResultListener, OnGetGeoCoderResultListener {
+    //OnGetGeoCoderResultListener接口实现了地理编码（根据地址转换经纬度）、逆地理编码（根据经纬度转换地址）
     @BindView(R.id.myloc)
     ImageView mMyloc;
     @BindView(R.id.btn_back)
@@ -133,6 +139,9 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
     private Rationale mRationale;
     private PermissionSetting mSetting;
 
+
+    GeoCoder mSearch = null; // 搜索模块，也可去掉地图模块独立使用
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -175,7 +184,7 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
         option.setIsNeedAddress(true);
         option.setOpenGps(true); // 打开gps
         option.setCoorType("bd09ll"); // 设置坐标类型
-        option.setScanSpan(1000);
+        option.setScanSpan(100000);
         mLocClient.setLocOption(option);
         mLocClient.start();
         //初始化图标,BitmapDescriptorFactory是bitmap 描述信息工厂类.
@@ -199,23 +208,41 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
         mSearchkey.setThreshold(1);
 
         //单击地图的监听
-        mBaiduMap.setOnMapClickListener(new BaiduMap.OnMapClickListener() {
-                                            //地图单击事件回调方法
-                                            @Override
-                                            public void onMapClick(LatLng latLng) {
-                                                Log.e("aaa", "点击到地图上了！纬度" + latLng.latitude + "经度" + latLng.longitude);
-                                            }
+        mBaiduMap.setOnMapClickListener(
+                new BaiduMap.OnMapClickListener() {
+                    //地图单击事件回调方法
+                    @Override
+                    public void onMapClick(LatLng latLng) {
+                        Log.e("aaa", "点击到地图上了！纬度" + latLng.latitude + "经度" + latLng.longitude);
+                        drawMarker(latLng.latitude, latLng.longitude);
+                        //再把搜索框上显示出名字
+                        // 反Geo搜索
+                        //这里点击后，获取了点击经纬度，调用逆地理编码onGetReverseGeoCodeResult，将经纬度转换为地址，
+                        // 同时在此方法中将经纬度（mSearchLat、mSearchLon）、onGetReverseGeoCodeResul方法中（addr）的反馈给调用的界面
+                        LatLng ptCenter = new LatLng(latLng.latitude, latLng.longitude);
+                        mSearch.reverseGeoCode(new ReverseGeoCodeOption()
+                                .location(ptCenter));
+                        //@param：LatLng
+                        mSearchLat = latLng.latitude;
+                        mSearchLon = latLng.longitude;
+                    }
 
-                                            //Poi 单击事件回调方法，比如点击到地图上面的商店，公交车站，地铁站等等公共场所
-                                            @Override
-                                            public boolean onMapPoiClick(MapPoi mapPoi) {
-                                                String POIName = mapPoi.getName();//POI点名称
-                                                LatLng POIPosition = mapPoi.getPosition();//POI点坐标
-                                                Log.e("aaa", "点击到地图上的POI物体了！名称：" + mapPoi.getName() + ",Uid:" + mapPoi.getUid());
-                                                Log.e("aaa", "POIName：" + POIName + ",POIPosition:" + POIPosition);
-                                                return true;
-                                            }
-                                        }
+                    //Poi 单击事件回调方法，比如点击到地图上面的商店，公交车站，地铁站等等公共场所
+                    @Override
+                    public boolean onMapPoiClick(MapPoi mapPoi) {
+                        String POIName = mapPoi.getName();//POI点名称
+                        LatLng POIPosition = mapPoi.getPosition();//POI点坐标
+                        Log.e("aaa", "点击到地图上的POI物体了！名称：" + mapPoi.getName() + ",Uid:" + mapPoi.getUid());
+                        Log.e("aaa", "POIName：" + POIName + ",POIPosition:" + POIPosition);
+                        //这里点击后，获取了点击的POI名称，调用地理编码onGetGeoCodeResult，将POI名称转换为经纬度，
+                        // 同时在此方法中将POI名称（addr）和onGetGeoCodeResult方法中经纬度（mSearchLat、mSearchLon）的反馈给调用的界面
+                        mSearch.geocode(new GeoCodeOption().city(mCity).address(mapPoi.getName()));
+                        addr =  mapPoi.getName();
+                        mSearchkey.setText(addr);
+                        //@param：城市+地址
+                        return true;
+                    }
+                }
 
         );
 
@@ -249,51 +276,20 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
                     mSuggestionSearch.requestSuggestion((new SuggestionSearchOption())
                             .keyword(cs.toString())
                             .city(mCity));
-                    searchButtonProcess(cs.toString(), mCity);
+                    searchButtonProcess(cs.toString());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         });
+
+
+        // 初始化搜索模块，注册事件监听
+        mSearch = GeoCoder.newInstance();
+        mSearch.setOnGetGeoCodeResultListener(this);
     }
 
-    public void searchButtonProcess(String keystr, String citystr) {
-
-//        List<String> mList = new ArrayList<>();
-//        mList.add("昆明市");
-//        mList.add("大理白族自治州");
-//        mList.add("楚雄彝族自治州");
-//        mList.add("红河哈尼族彝族自治州");
-//        mList.add("文山壮族苗族自治州");
-//        mList.add("曲靖市");
-//        mList.add("玉溪市");
-//        mList.add("昭通市");
-//        mList.add("保山市");
-//        mList.add("丽江市");
-//        mList.add("普洱市");
-//        mList.add("临沧市");
-//        mList.add("德宏傣族景颇族自治州");
-//        mList.add("怒江傈僳族自治州");
-//        mList.add("迪庆藏族自治州");
-//        mList.add("西双版纳傣族自治州");
-//
-//        for (int i = 0; i < mList.size(); i++) {
-//            searchType = 1;
-//            mPoiSearch.searchInCity((new PoiCitySearchOption())
-//                    .city(mList.get(i))
-//                    .keyword(keystr)
-//                    .pageNum(loadIndex)
-//                    .scope(1));
-//        }
-
-
-//        searchType = 1;
-//        mPoiSearch.searchInCity((new PoiCitySearchOption())
-//                .city(citystr)
-//                .keyword(keystr)
-//                .pageNum(loadIndex)
-//                .scope(1));
-
+    public void searchButtonProcess(String keystr) {
         LatLng southwest = new LatLng(86.290768, 18.103598);//将中国包起来
         LatLng northeast = new LatLng(136.625773, 53.545176);//将中国包起来
         searchBound = new LatLngBounds.Builder().include(southwest).include(northeast).build();
@@ -343,34 +339,19 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
                     intent.putExtra("lon", mCurrentLon + "");//经度
                     intent.putExtra("addr", addr);//地名
                     intent.putExtra("addrDes", addrDes);//地址
+                    Log.e("aaaa", "没有搜索   纬度lat = " + mCurrentLat + ",经度lon = " + mCurrentLon + ",地名addr = " + addr + ",地址addrDes = " + addrDes);
                 } else {
                     intent.putExtra("lat", mSearchLat + "");//纬度
                     intent.putExtra("lon", mSearchLon + "");//经度
                     intent.putExtra("addr", addr);//地名
                     intent.putExtra("addrDes", addrDes);//地址
+                    Log.e("aaaa", "搜索  纬度lat = " + mSearchLat + ",经度lon = " + mSearchLon + ",地名addr = " + addr + ",地址addrDes = " + addrDes);
                 }
                 setResult(mRequestCode, intent);
                 finish();
             }
         });
 
-
-//        initToolBar(mToolbar, "POI搜索", R.drawable.gank_ic_back_white);
-//        getSupportActionBar().setHomeButtonEnabled(true);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (mSearchkey.getText().toString().isEmpty() || mRequestCode == 0) {
-//                    finish();//返回
-//                } else {
-//                    Intent intent = new Intent();
-//                    String location = mSearchkey.getText().toString().trim();
-//                    intent.putExtra("location", location); //将计算的值回传回去
-//                    setResult(mRequestCode);
-//                }
-//            }
-//        });
     }
 
     @Override
@@ -440,6 +421,7 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
             mSearchLat = result.location.latitude;
             mSearchLon = result.location.longitude;
             Log.e("aaa", "mSeachLat = " + mSearchLat + ",mSeachLon = " + mSearchLon);
+            Log.e("aaa", "line 444 ---------------   mSeachLat = " + mSearchLat + ",mSeachLon = " + mSearchLon + ",addr = " + addr + ",addrDes = " + addrDes);
             getLocationByLL(mSearchLat, mSearchLon);
             drawMarker(mSearchLat, mSearchLon);
         }
@@ -457,6 +439,7 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
     }
 
     public void drawMarker(double la, double lg) {
+        mBaiduMap.clear();
         LatLng latLng = new LatLng(la, lg);
         // 构建Marker图标
         BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.icon_gcoding);
@@ -513,6 +496,51 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
             strInfo += "找到结果";
             Toast.makeText(BaiduMapPoiActivity.this, strInfo, Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public void onGetGeoCodeResult(GeoCodeResult result) {
+        if (result == null || result.error != SearchResult.ERRORNO.NO_ERROR) {
+            Toast.makeText(BaiduMapPoiActivity.this, "抱歉，未能找到结果", Toast.LENGTH_LONG)
+                    .show();
+            return;
+        }
+//        mBaiduMap.clear();
+//        mBaiduMap.addOverlay(new MarkerOptions().position(result.getLocation())
+//                .icon(BitmapDescriptorFactory
+//                        .fromResource(R.drawable.icon_marka)));
+        //加上覆盖物
+        mBaiduMap.setMapStatus(MapStatusUpdateFactory.newLatLng(result
+                .getLocation()));
+        //定位
+        String strInfo = String.format("纬度：%f 经度：%f",
+                result.getLocation().latitude, result.getLocation().longitude);
+        Toast.makeText(BaiduMapPoiActivity.this, strInfo, Toast.LENGTH_LONG).show();
+        mSearchLat = result.getLocation().latitude;
+        mSearchLon = result.getLocation().longitude;
+        //result保存地理编码的结果 城市-->坐标
+    }
+
+    @Override
+    public void onGetReverseGeoCodeResult(ReverseGeoCodeResult result) {
+        if (result == null || result.error != SearchResult.ERRORNO.NO_ERROR) {
+            Toast.makeText(BaiduMapPoiActivity.this, "抱歉，未能找到结果", Toast.LENGTH_LONG)
+                    .show();
+            return;
+        }
+//        mBaiduMap.clear();
+//        mBaiduMap.addOverlay(new MarkerOptions().position(result.getLocation())
+//                .icon(BitmapDescriptorFactory
+//                        .fromResource(R.drawable.icon_marka)));
+        //加上覆盖物
+        mBaiduMap.setMapStatus(MapStatusUpdateFactory.newLatLng(result
+                .getLocation()));
+        //定位
+        Toast.makeText(BaiduMapPoiActivity.this, result.getAddress(),
+                Toast.LENGTH_LONG).show();
+        addr = result.getAddress();
+        mSearchkey.setText(addr);
+        //result保存翻地理编码的结果 坐标-->城市
     }
 
     private class MyPoiOverlay extends PoiOverlay {
@@ -587,7 +615,6 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
         sugAdapter.notifyDataSetChanged();
     }
 
-
     /**
      * 定位SDK监听函数
      */
@@ -600,9 +627,6 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
                 return;
             }
             try {
-//                LocationClientOption option = new LocationClientOption();
-//                option.setIsNeedAddress(true);
-//                mLocClient.setLocOption(option);
                 //当前设备位置所在的省
                 mProvince = location.getProvince();
                 //当前设备位置所在的市
@@ -632,13 +656,13 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
             mCurrentLon = location.getLongitude();
             Log.e("aaa", "mCurrentLat = " + mCurrentLat + ",mCurrentLon = " + mCurrentLon);
             mCurrentAccracy = location.getRadius();
-            Log.e("aaa","mCurrentAccracy = " + mCurrentAccracy);
+            Log.e("aaa", "mCurrentAccracy = " + mCurrentAccracy);
             locData = new MyLocationData.Builder()
                     .accuracy(location.getRadius())
                     // 此处设置开发者获取到的方向信息，顺时针0-360
                     .direction(mCurrentDirection).latitude(location.getLatitude())
                     .longitude(location.getLongitude()).build();
-            Log.e("aaa","location.getRadius() = "+location.getRadius());
+            Log.e("aaa", "location.getRadius() = " + location.getRadius());
             mBaiduMap.setMyLocationData(locData);
             if (isFirstLoc) {
                 isFirstLoc = false;
@@ -683,10 +707,10 @@ public class BaiduMapPoiActivity extends BaseActivity implements SensorEventList
     @Override
     protected void onStart() {
         //开启定位，显示位置图标
-//        mBaiduMap.setMyLocationEnabled(true);
-//        if (!mLocClient.isStarted()) {
-//            mLocClient.start();
-//        }
+        mBaiduMap.setMyLocationEnabled(true);
+        if (!mLocClient.isStarted()) {
+            mLocClient.start();
+        }
         myOrientationListener.start();
         super.onStart();
     }

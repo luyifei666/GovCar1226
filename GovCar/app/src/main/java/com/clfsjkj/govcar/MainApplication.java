@@ -8,6 +8,7 @@ import android.support.v4.content.LocalBroadcastManager;
 
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
+import com.clfsjkj.govcar.alltextsize.PreferencesHelper;
 import com.clfsjkj.govcar.imageloader.GlideImageLoader;
 import com.clfsjkj.govcar.utils.Utils;
 import com.lzy.imagepicker.ImagePicker;
@@ -25,12 +26,23 @@ public final class MainApplication extends Application {
     private static Context mContext;
     private static LocalBroadcastManager localBroadcastManager;
     public static int maxImgCount = 8;               //允许选择图片最大数
+    private PreferencesHelper ph;
+    private static MainApplication instance;
+    // 单例模式获取唯一的Application实例
+    public static Application getInstance() {
+        return instance.getApplication();
+    }
+    public static MainApplication getMyInstance() {
+        return instance;
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
         mContext = getApplicationContext();
+        instance = this;//初始化
         application = this;
+        ph = new PreferencesHelper(getApplication(), "test");
         //在使用SDK各组件之前初始化context信息，传入ApplicationContext
         SDKInitializer.initialize(this);
         //自4.3.0起，百度地图SDK所有接口均支持百度坐标和国测局坐标，用此方法设置您使用的坐标类型.
@@ -92,5 +104,22 @@ public final class MainApplication extends Application {
             e.printStackTrace();
         }
         return pi;
+    }
+    public PreferencesHelper getPreferencesHelper() {
+        return ph;
+    }
+
+    /**
+     *
+     * @return 获取字体缩放比例
+     */
+    public float getFontScale(){
+        int currentIndex= ph.getValueInt("currentIndex",1);
+        return 1+currentIndex*0.1f;
+    }
+
+
+    private Application getApplication(){
+        return  this;
     }
 }

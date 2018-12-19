@@ -128,8 +128,8 @@ public class DispatchCarsActivity extends BaseActivity {
             case R.id.ll_select:
                 //跳转到选择车辆页面
                 Intent it = new Intent(DispatchCarsActivity.this,SelectCarActivity.class);
+//                it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(it);;
-                finish();
                 break;
             case R.id.btn_reject:
                 //下发车队

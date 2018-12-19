@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
@@ -28,37 +36,128 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/uuch/android_addialog/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="539">
+              <caret line="255" column="57" lean-forward="true" selection-start-line="255" selection-start-column="57" selection-end-line="255" selection-end-column="57" />
+              <folding>
+                <element signature="docComment;class#MainActivity#0" />
+                <element signature="method#onCreate#0;class#MainActivity#0" />
+                <element signature="docComment;method#initData#0;class#MainActivity#0" />
+                <element signature="docComment;method#initView#0;class#MainActivity#0" />
+                <element signature="method#initView#0;class#MainActivity#0" />
+                <element signature="docComment;method#initListener#0;class#MainActivity#0" />
+                <element signature="class#3224:5593" />
+                <element signature="method#onItemSelected#0;class#3224:5593" />
+                <element signature="method#onNothingSelected#0;class#3224:5593" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-manifest">
+        </entry>
+      </file>
+      <file leaf-file-name="RotateDownPageTransformer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/transformer/RotateDownPageTransformer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewHelper.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/83d41901478fa8795254244acbafd03f14224dab/library-2.4.0-sources.jar!/com/nineoldandroids/view/ViewHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="progress_loading_view.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/progress_loading_view.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/uuch/android_addialog/MainActivity.java">
+      <file leaf-file-name="progress_error_view_small.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/progress_error_view_small.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="130" column="40" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+            <state relative-caret-position="570">
+              <caret line="32" column="50" lean-forward="true" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="values.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/values/values.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="75" lean-forward="true" selection-start-line="6" selection-start-column="75" selection-end-line="8" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <file leaf-file-name="viewpager_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/viewpager_item.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="29" selection-end-column="52" />
+            <state relative-caret-position="550">
+              <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleDraweeView.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/drawee/0.12.0/6dea9a1cd2185a0325dbc104f04323f6e8ba7d61/drawee-0.12.0-sources.jar!/com/facebook/drawee/view/SimpleDraweeView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenericDraweeView.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/drawee/0.12.0/6dea9a1cd2185a0325dbc104f04323f6e8ba7d61/drawee-0.12.0-sources.jar!/com/facebook/drawee/view/GenericDraweeView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DraweeView.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/drawee/0.12.0/6dea9a1cd2185a0325dbc104f04323f6e8ba7d61/drawee-0.12.0-sources.jar!/com/facebook/drawee/view/DraweeView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>button5</find>
+      <find>anim_dialog_layout</find>
+      <find>DisplayUtil</find>
+      <find>advList</find>
+    </findStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -2751,7 +2850,397 @@
             <path>
               <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.flyco.pageindicator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.flyco.pageindicator" type="462c0819:PsiDirectoryNode" />
+              <item name="FlycoPageIndicator_Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.flyco.pageindicator" type="462c0819:PsiDirectoryNode" />
+              <item name="FlycoPageIndicator_Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.flyco.pageindicator" type="462c0819:PsiDirectoryNode" />
+              <item name="FlycoPageIndicator_Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.flyco.pageindicator" type="462c0819:PsiDirectoryNode" />
+              <item name="FlycoPageIndicator_Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.flyco.pageindicator" type="462c0819:PsiDirectoryNode" />
+              <item name="FlycoPageIndicator_Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="pageindicator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="adlibrary" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.flyco.pageindicator" type="462c0819:PsiDirectoryNode" />
+              <item name="FlycoPageIndicator_Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="pageindicator" type="462c0819:PsiDirectoryNode" />
+              <item name="indicator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="adlibrary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="adlibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="anim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="adlibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="transformer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="adlibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="adlibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="cn.yipianfengye.android" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-library" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="mipmap-xhdpi-v4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.facebook.fresco" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.facebook.fresco" type="462c0819:PsiDirectoryNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.facebook.fresco" type="462c0819:PsiDirectoryNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+              <item name="0.12.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.facebook.fresco" type="462c0819:PsiDirectoryNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+              <item name="0.12.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.facebook.fresco" type="462c0819:PsiDirectoryNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+              <item name="0.12.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.facebook.fresco" type="462c0819:PsiDirectoryNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+              <item name="0.12.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="android-adDialog-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="intermediates" type="462c0819:PsiDirectoryNode" />
+              <item name="exploded-aar" type="462c0819:PsiDirectoryNode" />
+              <item name="com.facebook.fresco" type="462c0819:PsiDirectoryNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+              <item name="0.12.0" type="462c0819:PsiDirectoryNode" />
+              <item name="jars" type="462c0819:PsiDirectoryNode" />
+              <item name="classes.jar" type="ab9368bb:PsiFileNode" />
+              <item name="drawee" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
@@ -2783,12 +3272,58 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="android_addialog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.facebook.rebound:rebound:0.3.8@jar" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.facebook.rebound:rebound:0.3.8@jar" type="70bed36:NamedLibraryElementNode" />
+              <item name="rebound-0.3.8.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.facebook.rebound:rebound:0.3.8@jar" type="70bed36:NamedLibraryElementNode" />
+              <item name="rebound-0.3.8.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="rebound" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.nineoldandroids:library:2.4.0@jar" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.nineoldandroids:library:2.4.0@jar" type="70bed36:NamedLibraryElementNode" />
+              <item name="library-2.4.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.nineoldandroids:library:2.4.0@jar" type="70bed36:NamedLibraryElementNode" />
+              <item name="library-2.4.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="nineoldandroids" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android-adDialog-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: com.nineoldandroids:library:2.4.0@jar" type="70bed36:NamedLibraryElementNode" />
+              <item name="library-2.4.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="nineoldandroids" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2820,11 +3355,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="F:/Android" />
-    <property name="device.picker.selection" value="JJR4C16A15023902" />
+    <property name="device.picker.selection" value="fb6fd40b" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../IndicatorDialog-master" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="2.0.0" />
@@ -2958,17 +3495,18 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Preview" weight="0.32995737" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Logcat" order="7" />
+      <window_info anchor="bottom" id="Logcat" order="7" weight="0.32897604" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -3002,6 +3540,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/uuch/android_addialog/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5700">
+          <caret line="247" column="21" lean-forward="true" selection-start-line="247" selection-start-column="21" selection-end-line="247" selection-end-column="21" />
+          <folding>
+            <element signature="docComment;class#MainActivity#0" />
+            <element signature="method#onCreate#0;class#MainActivity#0" />
+            <element signature="docComment;method#initData#0;class#MainActivity#0" />
+            <element signature="docComment;method#initView#0;class#MainActivity#0" />
+            <element signature="method#initView#0;class#MainActivity#0" />
+            <element signature="docComment;method#initListener#0;class#MainActivity#0" />
+            <element signature="class#3224:5593" />
+            <element signature="method#onItemSelected#0;class#3224:5593" />
+            <element signature="method#onNothingSelected#0;class#3224:5593" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="29" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/AdManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding>
+            <element signature="docComment;class#AdManager#0" />
+            <element signature="docComment;field#padding#0;class#AdManager#0" />
+            <element signature="docComment;field#widthPerHeight#0;class#AdManager#0" />
+            <element signature="method#AdManager#0;class#AdManager#0" />
+            <element signature="class#2448:2748" />
+            <element signature="method#onClick#0;class#2448:2748" />
+            <element signature="docComment;method#showAdDialog#0;class#AdManager#0" />
+            <element signature="method#showAdDialog#0;class#AdManager#0" />
+            <element signature="class#3996:4153" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="docComment;method#dismissAdDialog#0;class#AdManager#0" />
+            <element signature="docComment;method#isShowIndicator#0;class#AdManager#0" />
+            <element signature="method#isShowIndicator#0;class#AdManager#0" />
+            <element signature="class#AdAdapter#0;class#AdManager#0" />
+            <element signature="method#destroyItem#0;class#AdAdapter#0;class#AdManager#0" />
+            <element signature="method#instantiateItem#0;class#AdAdapter#0;class#AdManager#0" />
+            <element signature="class#6415:7483" />
+            <element signature="method#onFinalImageSet#0;class#6415:7483" />
+            <element signature="method#onIntermediateImageSet#0;class#6415:7483" />
+            <element signature="method#onFailure#0;class#6415:7483" />
+            <element signature="docComment;class#OnImageClickListener#0;class#AdManager#0" />
+            <element signature="class#OnImageClickListener#0;class#AdManager#0" />
+            <element signature="docComment;method#setPadding#0;class#AdManager#0" />
+            <element signature="method#setPadding#0;class#AdManager#0" />
+            <element signature="docComment;method#setWidthPerHeight#0;class#AdManager#0" />
+            <element signature="method#setWidthPerHeight#0;class#AdManager#0" />
+            <element signature="docComment;method#setOnImageClickListener#0;class#AdManager#0" />
+            <element signature="method#setOnImageClickListener#0;class#AdManager#0" />
+            <element signature="docComment;method#setAnimBackViewTransparent#0;class#AdManager#0" />
+            <element signature="method#setAnimBackViewTransparent#0;class#AdManager#0" />
+            <element signature="docComment;method#setDialogCloseable#0;class#AdManager#0" />
+            <element signature="method#setDialogCloseable#0;class#AdManager#0" />
+            <element signature="docComment;method#setOnCloseClickListener#0;class#AdManager#0" />
+            <element signature="method#setOnCloseClickListener#0;class#AdManager#0" />
+            <element signature="docComment;method#setBackViewColor#0;class#AdManager#0" />
+            <element signature="method#setBackViewColor#0;class#AdManager#0" />
+            <element signature="docComment;method#setBounciness#0;class#AdManager#0" />
+            <element signature="method#setBounciness#0;class#AdManager#0" />
+            <element signature="docComment;method#setSpeed#0;class#AdManager#0" />
+            <element signature="method#setSpeed#0;class#AdManager#0" />
+            <element signature="docComment;method#setPageTransformer#0;class#AdManager#0" />
+            <element signature="method#setPageTransformer#0;class#AdManager#0" />
+            <element signature="docComment;method#setOverScreen#0;class#AdManager#0" />
+            <element signature="method#setOverScreen#0;class#AdManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="29" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/uuch/android_addialog/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2775">
+          <caret line="130" column="40" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/uuch/android_addialog/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
           <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
         </state>
@@ -3022,18 +3666,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adlibrary/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -3050,17 +3689,268 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/drawable/image_disable.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adlibrary/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/AdConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="95" column="41" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="95" selection-end-column="41" />
+          <folding>
+            <element signature="docComment;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_UP_TO_DOWN#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_DOWN_TO_UP#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_LEFT_TO_RIGHT#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_RIGHT_TO_LEFT#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_UPLEFT_TO_CENTER#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_UPRIGHT_TO_CENTER#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_DOWNLEFT_TO_CENTER#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_DOWNRIGHT_TO_CENTER#0;class#AdConstant#0" />
+            <element signature="docComment;method#isConstantAnim#0;class#AdConstant#0" />
+            <element signature="method#isConstantAnim#0;class#AdConstant#0" />
+            <element signature="docComment;method#isCircleAnim#0;class#AdConstant#0" />
+            <element signature="method#isCircleAnim#0;class#AdConstant#0" />
+            <element signature="e#1706#1776#0" />
+            <element signature="docComment;field#ANIM_STOP_DEFAULT#0;class#AdConstant#0" />
+            <element signature="docComment;field#ANIM_STOP_TRANSPARENT#0;class#AdConstant#0" />
+            <element signature="e#2038#2108#0" />
+            <element signature="docComment;field#BOUNCINESS#0;class#AdConstant#0" />
+            <element signature="docComment;field#SPEED#0;class#AdConstant#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/bean/AdInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1675">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="94" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.rebound/rebound/0.3.8/5089b5ca3cf8b08dca228fb8553c4f748a682039/rebound-0.3.8-sources.jar!/com/facebook/rebound/SpringSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/anim/AnimSpring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/uuch/adlibrary/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="684" column="32" selection-start-line="684" selection-start-column="32" selection-end-line="684" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/mipmap-xhdpi-v4/ic_cancel_popup.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/anim_dialog_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/AnimDialogUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="60" column="71" lean-forward="true" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/ad_dialog_content_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.flyco.pageindicator/FlycoPageIndicator_Lib/1.0.0/adb65fc846eafdc6c7b56084b4e697a7d60dba0a/FlycoPageIndicator_Lib-1.0.0-sources.jar!/com/flyco/pageindicator/indicator/FlycoPageIndicaor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/AdManager.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="141" column="35" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="38" />
+          <folding>
+            <element signature="docComment;class#AdManager#0" />
+            <element signature="docComment;field#padding#0;class#AdManager#0" />
+            <element signature="docComment;field#widthPerHeight#0;class#AdManager#0" />
+            <element signature="method#AdManager#0;class#AdManager#0" />
+            <element signature="class#2448:2748" />
+            <element signature="method#onClick#0;class#2448:2748" />
+            <element signature="docComment;method#showAdDialog#0;class#AdManager#0" />
+            <element signature="method#showAdDialog#0;class#AdManager#0" />
+            <element signature="class#3996:4153" />
+            <element signature="e#4152#4153#0" expanded="true" />
+            <element signature="docComment;method#dismissAdDialog#0;class#AdManager#0" />
+            <element signature="docComment;method#isShowIndicator#0;class#AdManager#0" />
+            <element signature="method#isShowIndicator#0;class#AdManager#0" />
+            <element signature="class#AdAdapter#0;class#AdManager#0" />
+            <element signature="method#destroyItem#0;class#AdAdapter#0;class#AdManager#0" />
+            <element signature="method#instantiateItem#0;class#AdAdapter#0;class#AdManager#0" />
+            <element signature="class#6415:7483" />
+            <element signature="method#onFinalImageSet#0;class#6415:7483" />
+            <element signature="method#onIntermediateImageSet#0;class#6415:7483" />
+            <element signature="method#onFailure#0;class#6415:7483" />
+            <element signature="docComment;class#OnImageClickListener#0;class#AdManager#0" />
+            <element signature="class#OnImageClickListener#0;class#AdManager#0" />
+            <element signature="docComment;method#setPadding#0;class#AdManager#0" />
+            <element signature="method#setPadding#0;class#AdManager#0" />
+            <element signature="docComment;method#setWidthPerHeight#0;class#AdManager#0" />
+            <element signature="method#setWidthPerHeight#0;class#AdManager#0" />
+            <element signature="docComment;method#setOnImageClickListener#0;class#AdManager#0" />
+            <element signature="method#setOnImageClickListener#0;class#AdManager#0" />
+            <element signature="docComment;method#setAnimBackViewTransparent#0;class#AdManager#0" />
+            <element signature="method#setAnimBackViewTransparent#0;class#AdManager#0" />
+            <element signature="docComment;method#setDialogCloseable#0;class#AdManager#0" />
+            <element signature="method#setDialogCloseable#0;class#AdManager#0" />
+            <element signature="docComment;method#setOnCloseClickListener#0;class#AdManager#0" />
+            <element signature="method#setOnCloseClickListener#0;class#AdManager#0" />
+            <element signature="docComment;method#setBackViewColor#0;class#AdManager#0" />
+            <element signature="method#setBackViewColor#0;class#AdManager#0" />
+            <element signature="docComment;method#setBounciness#0;class#AdManager#0" />
+            <element signature="method#setBounciness#0;class#AdManager#0" />
+            <element signature="docComment;method#setSpeed#0;class#AdManager#0" />
+            <element signature="method#setSpeed#0;class#AdManager#0" />
+            <element signature="docComment;method#setPageTransformer#0;class#AdManager#0" />
+            <element signature="method#setPageTransformer#0;class#AdManager#0" />
+            <element signature="docComment;method#setOverScreen#0;class#AdManager#0" />
+            <element signature="method#setOverScreen#0;class#AdManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/utils/DisplayUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/view/MetaballView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="313" column="1" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="313" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/viewpager_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/drawee/0.12.0/6dea9a1cd2185a0325dbc104f04323f6e8ba7d61/drawee-0.12.0-sources.jar!/com/facebook/drawee/view/SimpleDraweeView.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="93" column="16" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/drawee/0.12.0/6dea9a1cd2185a0325dbc104f04323f6e8ba7d61/drawee-0.12.0-sources.jar!/com/facebook/drawee/view/GenericDraweeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/drawee/0.12.0/6dea9a1cd2185a0325dbc104f04323f6e8ba7d61/drawee-0.12.0-sources.jar!/com/facebook/drawee/view/DraweeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/uuch/android_addialog/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="130" column="40" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+        <state relative-caret-position="539">
+          <caret line="255" column="57" lean-forward="true" selection-start-line="255" selection-start-column="57" selection-end-line="255" selection-end-column="57" />
+          <folding>
+            <element signature="docComment;class#MainActivity#0" />
+            <element signature="method#onCreate#0;class#MainActivity#0" />
+            <element signature="docComment;method#initData#0;class#MainActivity#0" />
+            <element signature="docComment;method#initView#0;class#MainActivity#0" />
+            <element signature="method#initView#0;class#MainActivity#0" />
+            <element signature="docComment;method#initListener#0;class#MainActivity#0" />
+            <element signature="class#3224:5593" />
+            <element signature="method#onItemSelected#0;class#3224:5593" />
+            <element signature="method#onNothingSelected#0;class#3224:5593" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/ad-library/1.0/8b0d6561553a193a176f4dab1feeb2b204cde7eb/ad-library-1.0-sources.jar!/com/uuch/adlibrary/transformer/RotateDownPageTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/83d41901478fa8795254244acbafd03f14224dab/library-2.4.0-sources.jar!/com/nineoldandroids/view/ViewHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/progress_loading_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/layout/progress_error_view_small.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="32" column="50" lean-forward="true" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/cn.yipianfengye.android/ad-library/1.0/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="75" lean-forward="true" selection-start-line="6" selection-start-column="75" selection-end-line="8" selection-end-column="79" />
         </state>
       </provider>
     </entry>

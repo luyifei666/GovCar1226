@@ -1,7 +1,6 @@
 package com.clfsjkj.govcar.utils;
 
 /**
- * @author zheng
  *         配置网络请求相关的地址
  */
 public class AppNetConfig {

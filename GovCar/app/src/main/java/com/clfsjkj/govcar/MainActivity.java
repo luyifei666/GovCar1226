@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.clfsjkj.govcar.adapter.MainFragmentAdapter;
+import com.clfsjkj.govcar.alltextsize.MessageSocket;
 import com.clfsjkj.govcar.base.BaseActivity;
 import com.clfsjkj.govcar.http.UpdateAppHttpUtil;
 import com.clfsjkj.govcar.keepingappalive.receiver.ScreenReceiverUtil;
@@ -327,6 +328,21 @@ public class MainActivity extends BaseActivity {
             return true;
         }
         return super.dispatchKeyEvent(event);
+    }
+
+    @Override
+    public void rxBusCall(MessageSocket message) {
+        super.rxBusCall(message);
+        switch (message.id){
+            case 99://重启 不带动画
+                Intent intent = getIntent();
+                overridePendingTransition(0, 0);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                finish();
+                overridePendingTransition(0, 0);
+                startActivity(intent);
+                break;
+        }
     }
 
 

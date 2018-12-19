@@ -140,7 +140,7 @@ public class DispathedOrderDetailActivity extends BaseActivity {
     }
 
     private void initMyToolBar() {
-        initToolBar(mToolbar, "订单详情", R.drawable.gank_ic_back_white);
+        initToolBar(mToolbar, "派车详情", R.drawable.gank_ic_back_white);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

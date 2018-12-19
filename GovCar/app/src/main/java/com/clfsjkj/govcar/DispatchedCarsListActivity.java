@@ -64,7 +64,7 @@ public class DispatchedCarsListActivity extends BaseActivity implements BaseQuic
     }
 
     private void initMyToolBar() {
-        initToolBar(mToolbar, "我的任务", R.drawable.gank_ic_back_white);
+        initToolBar(mToolbar, "派车记录", R.drawable.gank_ic_back_white);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

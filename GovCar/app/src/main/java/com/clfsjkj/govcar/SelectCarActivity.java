@@ -96,9 +96,9 @@ public class SelectCarActivity extends BaseActivity {
 //                Toast.makeText(mContext,mList.get(position).toString(),Toast.LENGTH_SHORT).show();
 //                Log.e("aaa",mList.get(position).toString());
                 Intent it = new Intent(SelectCarActivity.this,SelectDriverActivity.class);
+                it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 it.putExtra("drvier","driver");
                 startActivity(it);
-                finish();
             }
         });
     }

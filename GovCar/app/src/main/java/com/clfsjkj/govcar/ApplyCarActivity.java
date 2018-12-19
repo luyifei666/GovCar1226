@@ -32,7 +32,10 @@ import com.bigkoo.pickerview.listener.OnTimeSelectListener;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.clfsjkj.govcar.adapter.ImagePickerAdapter;
 import com.clfsjkj.govcar.base.BaseActivity;
+import com.clfsjkj.govcar.bean.LocationBean;
 import com.clfsjkj.govcar.customerview.MClearEditText;
+import com.clfsjkj.govcar.flowlayout.FlowLayoutAdapter;
+import com.clfsjkj.govcar.flowlayout.FlowLayoutScrollView;
 import com.clfsjkj.govcar.imageloader.GlideImageLoader;
 import com.clfsjkj.govcar.imageloader.SelectDialog;
 import com.lzy.imagepicker.ImagePicker;
@@ -75,6 +78,9 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
     private TimePickerView pvTime;
     private boolean needJudgeUseCarTime;//是否需要判断用车时间与此刻的关系（正常申请需要判断、补录订单不需要）
     private String mNowTime;//当前时间
+    private List<String> flowLayoutList;//流式布局的list
+    private FlowLayoutAdapter<String> flowLayoutAdapter;//流式布局的adapter
+    private List<LocationBean> pathList;//途径地的list（需上传）
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.recyclerView)
@@ -121,6 +127,33 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
         //最好放到 Application oncreate执行
         initImagePicker();
         initWidget();
+        initFlowLayout();
+    }
+
+    private void initFlowLayout() {
+        flowLayoutList = new ArrayList<>();
+        pathList = new ArrayList<LocationBean>();
+        flowLayoutAdapter = new FlowLayoutAdapter<String>(flowLayoutList) {
+            @Override
+            public void bindDataToView(ViewHolder holder, int position, String bean) {
+
+                holder.setText(R.id.tv, bean);
+            }
+
+            @Override
+            public void onItemClick(int position, String bean) {
+
+                remove(position);//移除了标签，还要移除数组保存的
+                pathList.remove(position);
+
+            }
+
+            @Override
+            public int getItemLayoutID(int position, String bean) {
+                return R.layout.item_layout;
+            }
+        };
+        ((FlowLayoutScrollView) findViewById(R.id.flsv)).setAdapter(flowLayoutAdapter);
     }
 
     private void initMyToolBar() {
@@ -309,10 +342,27 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
             mSearchLon = data.getStringExtra("lon");
             addr = data.getStringExtra("addr");
             addrDes = data.getStringExtra("addrDes");
+            LocationBean loc;
             if (null == addrDes) {
                 mEtCarPath.setText(addr);
+                flowLayoutList.add(addr);//加入流式布局
+                flowLayoutAdapter.notifyDataSetChanged();
+                //将途径地加入数组，需上传
+                loc = new LocationBean();
+                loc.setLocName(addr);
+                loc.setLatitude(mSearchLat);
+                loc.setLongitude(mSearchLon);
+                pathList.add(loc);
             } else {
                 mEtCarPath.setText(addrDes + addr);
+                flowLayoutList.add(addrDes + addr);//加入流式布局
+                flowLayoutAdapter.notifyDataSetChanged();
+                //将途径地加入数组，需上传
+                loc = new LocationBean();
+                loc.setLocName(addrDes + addr);
+                loc.setLatitude(mSearchLat);
+                loc.setLongitude(mSearchLon);
+                pathList.add(loc);
             }
         } else if (resultCode == Integer.valueOf(REQUEST_CODE_END) && data != null) {
             //目的地
@@ -516,6 +566,12 @@ public class ApplyCarActivity extends BaseActivity implements ImagePickerAdapter
                     } else {
                         Log.e("aaa", "mStartTime<mBackTime");
                     }
+                }
+
+                for (int i = 0; i < pathList.size(); i++) {
+                    Log.e("aaa","遍历pathList的数据  getLocName = " + pathList.get(i).getLocName());
+                    Log.e("aaa","遍历pathList的数据  getLatitude = " + pathList.get(i).getLatitude());
+                    Log.e("aaa","遍历pathList的数据  getLongitude = " + pathList.get(i).getLongitude());
                 }
 
                 break;

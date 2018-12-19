@@ -36,7 +36,7 @@ public class EventHandler {
     
     public void showDialog() {
         if (mEventDialog != null) {
-            mEventDialog.setCanceledOnTouchOutside(false);
+            mEventDialog.setCanceledOnTouchOutside(true);
             mEventDialog.show();
         }
     }

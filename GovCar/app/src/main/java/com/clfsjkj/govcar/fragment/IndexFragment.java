@@ -26,15 +26,20 @@ import com.clfsjkj.govcar.ApplayOrderDetailActivity;
 import com.clfsjkj.govcar.ApplyCarActivity;
 import com.clfsjkj.govcar.ApplyRecordListActivity;
 import com.clfsjkj.govcar.ApprovalRecordListActivity;
+import com.clfsjkj.govcar.CarBackListActivity;
 import com.clfsjkj.govcar.CostAggregationActivity;
 import com.clfsjkj.govcar.CostQueryReplyListActivity;
 import com.clfsjkj.govcar.DemoMainActivity;
 import com.clfsjkj.govcar.DispatchedCarsListActivity;
 import com.clfsjkj.govcar.DriverOrderListActivity;
+import com.clfsjkj.govcar.EmergencyDispatchCarActivity;
 import com.clfsjkj.govcar.NeedCarBackListActivity;
 import com.clfsjkj.govcar.NeedChangeActivity;
 import com.clfsjkj.govcar.NeedDispatchCarsListActivity;
+import com.clfsjkj.govcar.OrderChangeActivity;
+import com.clfsjkj.govcar.OrderManageListActivity;
 import com.clfsjkj.govcar.R;
+import com.clfsjkj.govcar.RoutePlanDemo;
 import com.clfsjkj.govcar.UserEvaluationListActivity;
 import com.clfsjkj.govcar.adapter.MsgContentFragmentAdapter;
 import com.clfsjkj.govcar.base.BaseFragment;
@@ -211,6 +216,7 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
             @Override
             public void onItemClick(View view, int position) {
                 switch (allData.get(position).name) {
+                    //****************************申请人*****************************
                     case "申请用车":
                         it = new Intent(mContext, ApplyCarActivity.class);
                         //从申请用车进去的，需要判断用车时间不能在此刻之前
@@ -239,6 +245,7 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
                         it = new Intent(mContext, CostQueryReplyListActivity.class);
                         startActivity(it);
                         break;
+                    //****************************审批人*****************************
                     case "用车审批":
                         it = new Intent(mContext, ApplayOrderDetailActivity.class);
                         it.putExtra("isShowBtnGroup",true);
@@ -254,6 +261,7 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
                         it.putExtra("title","驳回记录");
                         startActivity(it);
                         break;
+                    //****************************调度员*****************************
                     case "需要派车":
                         it = new Intent(mContext, NeedDispatchCarsListActivity.class);
                         it.putExtra("title","需要派车");
@@ -269,19 +277,45 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
                         it.putExtra("title","需要变更");
                         startActivity(it);
                         break;
-                    case "任务列表":
-                        it = new Intent(mContext, DriverOrderListActivity.class);
-                        it.putExtra("title","任务列表");
-                        startActivity(it);
-                        break;
                     case "派车记录":
                         it = new Intent(mContext, DispatchedCarsListActivity.class);
                         it.putExtra("title","派车记录");
                         startActivity(it);
                         break;
+                    case "归队记录":
+                        it = new Intent(mContext, CarBackListActivity.class);
+                        it.putExtra("title","归队记录");
+                        startActivity(it);
+                        break;
+                    case "订单变更":
+                        it = new Intent(mContext, OrderChangeActivity.class);
+                        it.putExtra("title","订单变更");
+                        startActivity(it);
+                        break;
+                    case "订单管理":
+                        it = new Intent(mContext, OrderManageListActivity.class);
+                        it.putExtra("title","订单管理");
+                        startActivity(it);
+                        break;
+                    case "应急派车":
+                        it = new Intent(mContext, EmergencyDispatchCarActivity.class);
+                        it.putExtra("title","应急派车");
+                        startActivity(it);
+                        break;
+                    //****************************驾驶员*****************************
+                    case "任务列表":
+                        it = new Intent(mContext, DriverOrderListActivity.class);
+                        it.putExtra("title","任务列表");
+                        startActivity(it);
+                        break;
                     case "驾驶记录":
                         it = new Intent(mContext, DemoMainActivity.class);
                         it.putExtra("title","驾驶记录");
+                        startActivity(it);
+                        break;
+                    case "账号审批":
+                        it = new Intent(mContext, RoutePlanDemo.class);
+                        it.putExtra("title","账号审批");
                         startActivity(it);
                         break;
                     default:
