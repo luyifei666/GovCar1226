@@ -30,6 +30,7 @@ import com.clfsjkj.govcar.keepingappalive.utils.ScreenManager;
 import com.clfsjkj.govcar.permission.DefaultRationale;
 import com.clfsjkj.govcar.permission.PermissionSetting;
 import com.clfsjkj.govcar.utils.NotifyUtil;
+import com.clfsjkj.govcar.utils.RxActivityTool;
 import com.vector.update_app.UpdateAppManager;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
@@ -216,28 +217,7 @@ public class MainActivity extends BaseActivity {
     public void permission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermission(Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION);
-//            AndPermission.with(this)
-//                    .permission(Manifest.permission.RECORD_AUDIO)
-//                    .rationale(mRationale)
-//                    .onGranted(new Action() {
-//                        @Override
-//                        public void onAction(List<String> permissions) {
-//                            Toast.makeText(MainActivity.this, "授权成功", Toast.LENGTH_SHORT).show();
-//                        }
-//                    })
-//                    .onDenied(new Action() {
-//                        @Override
-//                        public void onAction(@NonNull List<String> permissions) {
-//                            Toast.makeText(MainActivity.this, "授权失败", Toast.LENGTH_SHORT).show();
-//                            if (AndPermission.hasAlwaysDeniedPermission(MainActivity.this, permissions)) {
-//                                mSetting.showSetting(permissions);
-//                            }
-//                        }
-//                    })
-//                    .start();
-
         }
-
 
     }
 
@@ -324,6 +304,8 @@ public class MainActivity extends BaseActivity {
                 exitTime = System.currentTimeMillis();
             } else {
                 finish();
+                //清空所有的Activity
+                RxActivityTool.AppExit(MainActivity.this);
             }
             return true;
         }

@@ -24,6 +24,7 @@ import com.clfsjkj.govcar.MainApplication;
 import com.clfsjkj.govcar.R;
 import com.clfsjkj.govcar.alltextsize.MessageSocket;
 import com.clfsjkj.govcar.alltextsize.RxBus;
+import com.clfsjkj.govcar.utils.RxActivityTool;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -46,6 +47,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
+        RxActivityTool.addActivity(this);//将Activity全部加入进去，当退出APP时，结束所有的Activity
         observable = RxBus.getInstance().register(this.getClass().getSimpleName(), MessageSocket.class);
         observable.observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<MessageSocket>() {
 
@@ -177,7 +179,7 @@ public class BaseActivity extends AppCompatActivity {
         } else if (Build.VERSION.SDK_INT >= 19) {//19表示4.4
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             //虚拟键盘也透明
-             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
     }
 

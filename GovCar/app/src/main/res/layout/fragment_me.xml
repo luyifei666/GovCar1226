@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragment.MeFragment">
 
     <RelativeLayout
@@ -39,26 +41,80 @@
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="我" />
-
-    <Button
-        android:id="@+id/btn"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
-        android:layout_marginBottom="104dp"
-        android:text="设置字体" />
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lineColor"/>
+
+        <com.clfsjkj.govcar.customerview.MySettingItemView
+            android:id="@+id/item_gank_headline"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/item_setting_selector"
+            app:setting_red_dot="false"
+            app:setting_right_text="XXX"
+            app:setting_title="XXX"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:background="@color/lineColor"/>
+
+        <com.clfsjkj.govcar.customerview.MySettingItemView
+            android:id="@+id/set_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/item_setting_selector"
+            app:setting_red_dot="false"
+            app:setting_right_text="标准"
+            app:setting_title="字体大小"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:background="@color/lineColor"/>
+
+        <com.clfsjkj.govcar.customerview.MySettingItemView
+            android:id="@+id/item_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/item_setting_selector"
+            android:visibility="visible"
+            app:setting_red_dot="false"
+            app:setting_title="意见反馈"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:background="@color/lineColor"/>
+
+
+        <com.clfsjkj.govcar.customerview.MySettingItemView
+            android:id="@+id/item_app_update"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/item_setting_selector"
+            app:setting_red_dot="true"
+            app:setting_title="版本更新"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lineColor"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

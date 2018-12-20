@@ -70,4 +70,10 @@
     <color name="clickspan_color">#00ddb6</color>
     <color name="dull_blue">#3B4BBF</color>
     <color name="bg">#eaebed</color>
+    <color name="_9">#999999</color>
+    <color name="e">#EEEEEE</color>
+    <color name="gank_text3_color">#999999</color>     <!--三级字体颜色日间-->
+    <color name="item_bg_night">#1e222e</color>
+    <color name="item_setting_bg_night">#2A2F41</color>
+    <color name="item_selecter_pressed_color_night">#f6202431</color>
 </resources>
