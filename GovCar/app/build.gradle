@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "com.clfsjkj.govcar"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -111,4 +111,10 @@ dependencies {
     //RxAndroid  主要用于一键换全局字体大小
     implementation 'io.reactivex.rxjava2:rxjava:2.0.5'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //MPAndroidChart 图标库
+//    implementation 'com.github.PhilJay：MPAndroidChart：v3.1.0-alpha'
+    /* 图片选择 用于“我的”设置头像 */
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1'
+    /* 未读消息数提示数字 */
+    implementation 'q.rorbin:badgeview:1.1.3'
 }

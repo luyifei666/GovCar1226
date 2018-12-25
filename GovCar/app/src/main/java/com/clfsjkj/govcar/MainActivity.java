@@ -11,6 +11,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import q.rorbin.badgeview.QBadgeView;
 
 /**
  * 主框架
@@ -262,6 +264,13 @@ public class MainActivity extends BaseActivity {
             tvTitle.setText(tabTitlees[i]);
             ImageView imgTab = (ImageView) view.findViewById(R.id.img_tab);
             imgTab.setImageResource(tabImgs[i]);
+
+            //-----------------------------------------------------可在这里设置未读消息提示-----------------------------------------------------------------------
+            new QBadgeView(this).bindTarget(imgTab)
+                    .setBadgeText("").setBadgeTextColor(0xffe51c23)
+//                    .setGravityOffset((float)-0.5, (float)-0.5, true)
+                    .setBadgePadding(4, true)
+                    .setBadgeGravity(Gravity.TOP | Gravity.END).setBadgeBackgroundColor(0xffe51c23);
             tabLayout.addTab(tab);
         }
     }
@@ -315,7 +324,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void rxBusCall(MessageSocket message) {
         super.rxBusCall(message);
-        switch (message.id){
+        switch (message.id) {
             case 99://重启 不带动画
                 Intent intent = getIntent();
                 overridePendingTransition(0, 0);

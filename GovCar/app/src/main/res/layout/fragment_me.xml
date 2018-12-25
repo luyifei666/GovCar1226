@@ -47,10 +47,86 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical">
 
+        <RelativeLayout
+            android:id="@+id/rl_item_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/item_selector">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1.2px"
+                android:background="@color/lineColor" />
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignBottom="@+id/iv_right_arrow01"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:text="头像"-->
+                <!--android:textColor="@color/black_text2_color"-->
+                <!--android:textSize="14sp" />-->
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="96dp"
+                android:layout_marginLeft="96dp"
+                android:layout_marginTop="15dp"
+                android:text="陆毅飞"
+                android:textColor="@color/black_text2_color"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/user_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="96dp"
+                android:layout_marginLeft="96dp"
+                android:layout_marginTop="38dp"
+                android:text="17608755277"
+                android:textColor="@color/black_text2_color"
+                android:textSize="@dimen/sp_13" />
+
+            <ImageView
+                android:id="@+id/iv_right_arrow01"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/gank_icon_arrow_right"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="283dp"
+                android:layout_toLeftOf="@id/iv_right_arrow01"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1.2px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/lineColor" />
+        </RelativeLayout>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/lineColor"/>
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/lineColor" />
 
         <com.clfsjkj.govcar.customerview.MySettingItemView
             android:id="@+id/item_gank_headline"
@@ -58,15 +134,15 @@
             android:layout_height="44dp"
             android:background="@drawable/item_setting_selector"
             app:setting_red_dot="false"
-            app:setting_right_text="XXX"
-            app:setting_title="XXX"/>
+            app:setting_right_text=""
+            app:setting_title="账号信息" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="16dp"
-            android:background="@color/lineColor"/>
+            android:background="@color/lineColor" />
 
         <com.clfsjkj.govcar.customerview.MySettingItemView
             android:id="@+id/set_text_size"
@@ -75,14 +151,14 @@
             android:background="@drawable/item_setting_selector"
             app:setting_red_dot="false"
             app:setting_right_text="标准"
-            app:setting_title="字体大小"/>
+            app:setting_title="字体大小" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="16dp"
-            android:background="@color/lineColor"/>
+            android:background="@color/lineColor" />
 
         <com.clfsjkj.govcar.customerview.MySettingItemView
             android:id="@+id/item_feedback"
@@ -91,14 +167,14 @@
             android:background="@drawable/item_setting_selector"
             android:visibility="visible"
             app:setting_red_dot="false"
-            app:setting_title="意见反馈"/>
+            app:setting_title="意见反馈" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="16dp"
-            android:background="@color/lineColor"/>
+            android:background="@color/lineColor" />
 
 
         <com.clfsjkj.govcar.customerview.MySettingItemView
@@ -107,12 +183,12 @@
             android:layout_height="44dp"
             android:background="@drawable/item_setting_selector"
             app:setting_red_dot="true"
-            app:setting_title="版本更新"/>
+            app:setting_title="版本更新" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/lineColor"/>
+            android:background="@color/lineColor" />
 
     </LinearLayout>
 

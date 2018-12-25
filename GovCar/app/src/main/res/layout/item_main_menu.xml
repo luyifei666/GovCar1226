@@ -7,8 +7,9 @@
 
     <ImageView
         android:id="@+id/img_tab"
-        android:layout_width="@dimen/dp_24"
-        android:layout_height="@dimen/dp_24"
+        android:layout_width="@dimen/dp_28"
+        android:layout_height="@dimen/dp_28"
+        android:padding="4dp"
         android:src="@drawable/menu_msg_default" />
 
     <TextView

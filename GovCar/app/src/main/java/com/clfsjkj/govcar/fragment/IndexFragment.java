@@ -451,19 +451,19 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
         if (first == -1 || end == -1)
             return;
         if (position <= first) {      //移动到前面
-            gridManager.scrollToPosition(position);
+            gridManager.smoothScrollToPosition(recyclerViewAll, null, position);
             Log.e("aaa", "移动到前面 position = " + position);
         } else if (position >= end) {      //移动到后面
             isMove = true;
             scrollPosition = position;
             gridManager.smoothScrollToPosition(recyclerViewAll, null, position);
-            Log.e("aaa", "移动到前面 position = " + position);
+            Log.e("aaa", "移动到后面 position = " + position);
         } else {//中间部分
             int n = position - gridManager.findFirstVisibleItemPosition();
             if (n > 0 && n < allData.size()) {
                 int top = gridManager.findViewByPosition(position).getTop();
-                recyclerViewAll.scrollBy(0, top);
-                Log.e("aaa", "移动到前面 position = " + position);
+                recyclerViewAll.smoothScrollBy(0, top);
+                Log.e("aaa", "移动到中间 position = " + position);
             }
         }
     }
@@ -497,7 +497,7 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
             super.onScrolled(recyclerView, dx, dy);
-            if (isDrag) {  //拖动过程中
+//            if (isDrag) {  //拖动过程中
                 int position = gridManager.findFirstVisibleItemPosition();
                 if (position > 0) {
                     for (int i = 0; i < position + 1; i++) {
@@ -507,7 +507,7 @@ public class IndexFragment extends BaseFragment implements View.OnClickListener 
                     }
                     scrollTab(currentTab);
                 }
-            }
+//            }
         }
     };
 
