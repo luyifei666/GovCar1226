@@ -267,7 +267,7 @@ public class MainActivity extends BaseActivity {
 
             //-----------------------------------------------------可在这里设置未读消息提示-----------------------------------------------------------------------
             new QBadgeView(this).bindTarget(imgTab)
-                    .setBadgeText("").setBadgeTextColor(0xffe51c23)
+                    .setBadgeText("").setBadgeTextColor(0xffffffff)
 //                    .setGravityOffset((float)-0.5, (float)-0.5, true)
                     .setBadgePadding(4, true)
                     .setBadgeGravity(Gravity.TOP | Gravity.END).setBadgeBackgroundColor(0xffe51c23);

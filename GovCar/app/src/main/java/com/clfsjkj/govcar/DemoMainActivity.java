@@ -113,7 +113,7 @@ public class DemoMainActivity extends BaseActivity implements BaiduMap.OnMapClic
     int nowSearchType = -1; // 当前进行的检索，供判断浏览节点时结果使用。
 
     String startNodeStr = "文山壮族苗族自治州";
-    String endNodeStr = "双河湾";
+    String endNodeStr = "筑友双河湾";
     boolean hasShownDialogue = false;
 
     @Override
